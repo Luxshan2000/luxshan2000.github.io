@@ -1,12 +1,68 @@
-<?php
-?>
-
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Personal, Luxshan, CSE, Student, Moratuwa">
+    <meta name="description" content="Thavarasa Luxshan is a Computer Science and Engineering student at the University of Moratuwa, Sri Lanka.">
+    <meta name="author" content="Luxshan Thavarasa">
+    <title>Thavarasa Luxshan | CSE Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-5.0.2/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/MyCSS/my-style.css"/>
+    <script src="/assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js" ></script>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+</head>
+<body>
+<header class="shadow-sm fixed-top">
+    <div class="navbar ">
+        <div class="logo"><a href="#">SEC</a></div>
+        <ul  style="margin: 0" class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#home">Achievements</a></li>
+            <li><a href="#home">Teachers</a></li>
+            <li><a href="/templates/classes.php">Classes</a></li>
+        </ul>
+        <a href="#myFooter" class="register_btn">Contact Us</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu">
+        <li class="menu_item" ><a href="#home">Home</a></li>
+        <li class="menu_item" ><a href="#about">About</a></li>
+        <li class="menu_item" ><a href="#home">Achievements</a></li>
+        <li class="menu_item" ><a href="#home">Teachers</a></li>
+        <li class="menu_item" ><a href="#home">Classes</a></li>
+        <a  href="#myFooter" class="register_btn menu_item">Contact Us</a>
+
+    </div>
+</header>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+    const menuItems = document.querySelectorAll('.menu_item');
+
+    toggleBtn.onclick = function() {
+        dropdownMenu.classList.toggle('open');
+        toggleBtnIcon.classList.toggle('fa-xmark');
+        toggleBtnIcon.classList.toggle('fa-bars');
+    };
+
+    menuItems.forEach(item => {
+        item.onclick = function() {
+            dropdownMenu.classList.toggle('open');
+            toggleBtnIcon.classList.toggle('fa-xmark');
+            toggleBtnIcon.classList.toggle('fa-bars');
+        };
+    });
+</script>
 
 </body>
 </html>
+
+
