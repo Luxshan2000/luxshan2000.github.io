@@ -1,7 +1,12 @@
 <?php
 ?>
 
+<!DOCTYPE html>
+<html>
+<body>
 
-<div>
-  <h3>Hi</h3>
-</div>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
