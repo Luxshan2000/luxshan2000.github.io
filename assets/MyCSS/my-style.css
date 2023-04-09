@@ -1,0 +1,180 @@
+body{
+    margin: 0;
+    background-color: #E9F8F9;
+}
+
+
+main{
+    min-height: 400px;
+}
+li{
+    list-style: none;
+    padding: 0 1rem;
+}
+a{
+    text-decoration: none;
+    color: #002B5B;
+    font-size: 1rem;
+}
+
+header{
+    margin: 0;
+
+    padding: 0 0rem;
+    position: absolute;
+}
+
+a:hover{
+    color: #0075fb;
+    transition-duration: 1s;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color: #57C5B6;
+}
+
+.navbar{
+    width: 100%;
+    height: 55px;
+    max-width: 1450px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: #002B5B;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.register_btn{
+    background-color: #002B5B;
+    color: #57C5B6;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease;
+    transition-duration: 0.2ms;
+    padding:0.5rem 2rem;
+}
+
+.register_btn:hover{
+    scale: 1.05;
+    color: #57C5B6;
+}
+
+.register_btn:active{
+    scale: 0.95;
+}
+
+.dropdown_menu{
+    z-index: 9999;
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(87, 197, 182,0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+
+.dropdown_menu.open{
+    height: 250px;
+}
+
+.dropdown_menu li{
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .register_btn{
+    display: flex;
+    margin: 0 15% 10px 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 992px){
+    .dropdown_menu{
+        display: block;
+    }
+    .navbar .links,
+    .navbar .register_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.myFooter{
+    background-color: #1A5F7A;
+    position: relative;
+    bottom: 0;
+}
+
+
+#go-up-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: #10db7e;
+    color: #01291a;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+#go-up-btn.show {
+    opacity: 1;
+}
+
+#go-up-btn i{
+    rotate: 180deg;
+}
+
+
+.gallery_product{
+    padding: 1rem;
+}
+
+
+
