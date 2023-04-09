@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: #E3FCBF;
+    background-color: #f1f8e9;
 }
 
 
@@ -26,13 +26,13 @@ header{
 
 a:hover{
     color: #0075fb;
-    transition-duration: 1s;
+    transition-duration: 500ms;
 }
 
 header{
     position: relative;
     padding: 0 2rem;
-    background-color: #57C5B6;
+    background-color: #00FFAB;
 }
 
 .navbar{
@@ -45,6 +45,7 @@ header{
     justify-content: space-between;
 }
 
+
 .navbar .logo a{
     font-size: 1.5rem;
     font-weight: bold;
@@ -56,15 +57,15 @@ header{
 }
 
 .navbar .toggle_btn{
-    color: #002B5B;
+    color: #005b38;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 
-.register_btn{
-    background-color: #002B5B;
-    color: #57C5B6;
+.contact_btn{
+    background-color: #034935;
+    color: #ffffff;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -76,12 +77,13 @@ header{
     padding:0.5rem 2rem;
 }
 
-.register_btn:hover{
+.contact_btn:hover{
     scale: 1.05;
-    color: #57C5B6;
+    background-color: #034935;
+    color: white;
 }
 
-.register_btn:active{
+.contact_btn:active{
     scale: 0.95;
 }
 
@@ -93,7 +95,7 @@ header{
     right: 2rem;
     top: 60px;
     width: 300px;
-    background: rgba(87, 197, 182,0.6);
+    background: rgba(0, 255, 171,0.6);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -112,7 +114,7 @@ header{
     justify-content: center;
 }
 
-.dropdown_menu .register_btn{
+.dropdown_menu .contact_btn{
     display: flex;
     margin: 0 15% 10px 15%;
     align-items: center;
@@ -124,7 +126,7 @@ header{
         display: block;
     }
     .navbar .links,
-    .navbar .register_btn{
+    .navbar .contact_btn{
         display: none;
     }
 
@@ -142,7 +144,7 @@ header{
 }
 
 .myFooter{
-    background-color: #1A5F7A;
+    background-color: #034935;
     position: relative;
     bottom: 0;
 }
@@ -169,11 +171,6 @@ header{
 
 #go-up-btn i{
     rotate: 180deg;
-}
-
-
-.gallery_product{
-    padding: 1rem;
 }
 
 

@@ -19,32 +19,133 @@
 
 </head>
 <body>
+
+
 <header class="shadow-sm fixed-top">
     <div class="navbar ">
-        <div class="logo"><a href="#">SEC</a></div>
+        <div class="logo"><a href="#">LUX</a></div>
         <ul  style="margin: 0" class="links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#home">Achievements</a></li>
-            <li><a href="#home">Teachers</a></li>
-            <li><a href="/templates/classes.php">Classes</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#home">Projects</a></li>
+            <li><a href="#home">Resume</a></li>
         </ul>
-        <a href="#myFooter" class="register_btn">Contact Us</a>
+        <a href="#myFooter" class="contact_btn">Contact Me</a>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
     </div>
-
     <div class="dropdown_menu">
         <li class="menu_item" ><a href="#home">Home</a></li>
         <li class="menu_item" ><a href="#about">About</a></li>
         <li class="menu_item" ><a href="#home">Achievements</a></li>
         <li class="menu_item" ><a href="#home">Teachers</a></li>
         <li class="menu_item" ><a href="#home">Classes</a></li>
-        <a  href="#myFooter" class="register_btn menu_item">Contact Us</a>
-
+        <a  href="#myFooter" class="contact_btn menu_item">Contact Us</a>
     </div>
 </header>
+
+
+<main>
+    <div class="container-fluid imageSlider pb-3 p-0 mt-2 pt-5">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel">
+            <div  class="carousel-indicators">
+                <button  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/assets/default/image1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/default/image2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/default/image3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+</main>
+
+
+<div id="myFooter" class="container-fluid myFooter">
+    <footer class="pt-5 p-2">
+        <div class="row">
+
+            <div class="col-md-6 col-lg-3 col-sm-12 pb-sm-2">
+                <h5>Contact details</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item p-0"><a  class="nav-link p-0 text-muted">Phone No: 0773038402</a></li>
+                    <li  class="nav-item p-0"><a  class="nav-link p-0 text-muted">Email: Luxshanlux2000@gmail.com</a></li>
+                    <li class="nav-item p-0"><a  class="nav-link p-0 text-muted">Address: Neththaliyaru, Visuvamadu West, Visuvamadu, Mullaitivu.</a></li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 col-sm-12 pb-sm-2 pb-2">
+                <h5>My links</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item p-0"><a href="#home" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item p-0"><a href="#about" class="nav-link p-0 text-muted">About Me</a></li>
+                    <li class="nav-item p-0"><a href="#" class="nav-link p-0 text-muted">Projects</a></li>
+                    <li class="nav-item p-0"><a href="#" class="nav-link p-0 text-muted">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-sm-12  mb-3">
+                <form>
+                    <h5>Put Your Valuable Feedback</h5>
+                    <p>As someone who is always striving to improve, I would love to hear your feedback.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Your Feedback</label>
+                        <input style="background-color: #f1f8e9;" id="newsletter1" type="text" class="form-control text-dark" placeholder="Comment">
+                        <button class="btn btn-success" type="button">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column  row text-center  border-top">
+            <ul class="list-unstyled justify-content-center d-flex pt-3">
+                <li ><a class="link-dark" href="#"><i class="fa-brands text-info fa-2x fa-linkedin"></i></a></li>
+                <li ><a class="link-dark" href="#"><i class="fa-brands text-dark fa-2x fa-github"></i></a></li>
+                <li ><a class="link-dark" href="#"><i class="fa-brands text-info fa-2x fa-facebook"></i></a></li>
+                <li ><a class="link-dark" href="#"><i class="fa-brands fa-2x text-success fa-whatsapp"></i></a></li>
+                <li ><a class="link-dark" href="#"><i class="fa-regular fa-2x text-info fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="d-flex flex-column text-center  row justify-content-center">
+            <p>Thavarasa Luxshan</p>
+            <p>&copy;2023 All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
 
 <script>
     const toggleBtn = document.querySelector('.toggle_btn');
@@ -66,7 +167,6 @@
         };
     });
 </script>
-
 </body>
 </html>
 
