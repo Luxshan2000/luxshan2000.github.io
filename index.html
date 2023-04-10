@@ -217,6 +217,29 @@
 
 
 </script>
+
+<button id="go-up-btn">
+    <i class="fa-solid fa-2x fa-circle-chevron-down"></i>
+</button>
+
+<script>
+    const goUpBtn = document.querySelector('#go-up-btn');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+            goUpBtn.classList.add('show');
+        } else {
+            goUpBtn.classList.remove('show');
+        }
+    });
+
+    goUpBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 </body>
 </html>
 
