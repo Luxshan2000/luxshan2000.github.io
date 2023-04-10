@@ -185,5 +185,20 @@ header{
     rotate: 180deg;
 }
 
+.readMore{
+    background-color: #B8F1B0;
+}
+
+.readMore:hover{
+    background: #1b9a59;
+    transition: background-color ease-in-out;
+    transition-duration: 100ms;
+}
+.readMore:active{
+    background: #05552c;
+    transition: background-color ease-in-out;
+    transition-duration: 100ms;
+}
+
 
 
