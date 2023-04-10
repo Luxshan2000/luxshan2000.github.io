@@ -87,6 +87,10 @@ header{
     scale: 0.95;
 }
 
+.MobileImageSlider{
+    display: none;
+}
+
 .dropdown_menu{
     z-index: 9999;
     margin-top: 5px;
@@ -133,7 +137,15 @@ header{
     .navbar .toggle_btn{
         display: block;
     }
+}
 
+@media(max-width: 600px){
+    .DesktopImageSlider{
+        display: none;
+    }
+    .MobileImageSlider{
+        display: block;
+    }
 }
 
 @media(max-width: 576px){
