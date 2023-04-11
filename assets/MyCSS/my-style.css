@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth; /* for older versions of Safari */
+}
 body{
     margin: 0;
     background-color: #f1f8e9;
