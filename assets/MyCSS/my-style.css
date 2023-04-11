@@ -200,6 +200,19 @@ header{
     transition-duration: 100ms;
 }
 
+.filter-button:hover{
+    background-color: #7cb272;
+    transition: opacity;
+    transition-duration: 100ms;
+}
+
+.filter-button{
+    background-color: #B8F1B0;
+}
+
+.filter-button.open{
+    background-color: #7cb272;
+}
 
 
 

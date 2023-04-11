@@ -50,19 +50,18 @@
 
 
 
-
 <main>
     <div id="projects"  class="container-fluid p-sm-1 p-lg-5 pt-lg-0">
-        <div class="text-center">
-            <button class="btn rounded-3 btn-primary m-2 filter-button" data-filter="all">All</button>
-            <button class="btn rounded-3 btn-success m-2 filter-button" data-filter="web">Web Development</button>
-            <button class="btn rounded-3 btn-danger m-2 filter-button" data-filter="app">App Development</button>
-            <button class="btn rounded-3 btn-info m-2 filter-button" data-filter="other">Other</button>
+        <div class="text-center justify-content-center row">
+            <span  class="btn text-success col-sm-3 col-lg-1 col-md-2 rounded-3 badge p-2 open  m-2 filter-button" data-filter="all">All</span>
+            <span  class="btn text-success col-sm-3 col-lg-1 col-md-2 rounded-3 badge p-2  m-2 filter-button" data-filter="web">Web</span>
+            <span  class="btn text-success col-sm-3 col-lg-1 col-md-2  rounded-3 badge p-2  m-2 filter-button" data-filter="app">App</span>
+            <span  class="btn text-success col-sm-3 col-lg-1 col-md-2 rounded-3 badge p-2  m-2 filter-button" data-filter="other">Other</span>
         </div>
         <br/>
         <div class="row">
-            <div class="filter web col-md-6 col-sm-12  col-lg-4 p-3">
-                <div class="card shadow border-1 border-success">
+            <div class="filter  web col-md-6 col-sm-12  col-lg-4 p-3">
+                <div style="background-color: #f1f8e9;"  class="card shadow  border-1">
                     <div class="card-body">
                         <h5 class="card-title text-center text-decoration-underline">Supply Chain Management System</h5>
                         <p class="card-text">A Supply Chain Management System (SCMS) is a powerful software tool
@@ -73,10 +72,46 @@
                             changes in demand or supply, and collaborate more effectively with suppliers and
                             customers. Overall, a SCMS can help companies improve their bottom line and achieve
                             sustainable growth.</p>
-                        <a href="#" class="btn btn-primary">Go to git</a>
+                        <a style="width: 100%" href="#" class="badge  p-2 bg-info ">Go to git</a>
                     </div>
                 </div>
             </div>
+
+            <div class="filter  web col-md-6 col-sm-12  col-lg-4 p-3">
+                <div style="background-color: #f1f8e9;"  class="card shadow   border-1">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-decoration-underline">Supply Chain Management System</h5>
+                        <p class="card-text">A Supply Chain Management System (SCMS) is a powerful software tool
+                            that helps companies manage their supply chain more efficiently, by automating and
+                            optimizing key processes. This allows companies to reduce costs, improve customer
+                            service, and stay competitive in the market. With real-time visibility into the
+                            supply chain, companies can make better-informed decisions, respond quickly to
+                            changes in demand or supply, and collaborate more effectively with suppliers and
+                            customers. Overall, a SCMS can help companies improve their bottom line and achieve
+                            sustainable growth.</p>
+                        <a style="width: 100%" href="#" class="badge  p-2 bg-info ">Go to git</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter  app col-md-6 col-sm-12  col-lg-4 p-3">
+                <div style="background-color: #f1f8e9;"  class="card shadow  border-1">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-decoration-underline">Supply Chain Management System</h5>
+                        <p class="card-text">A Supply Chain Management System (SCMS) is a powerful software tool
+                            that helps companies manage their supply chain more efficiently, by automating and
+                            optimizing key processes. This allows companies to reduce costs, improve customer
+                            service, and stay competitive in the market. With real-time visibility into the
+                            supply chain, companies can make better-informed decisions, respond quickly to
+                            changes in demand or supply, and collaborate more effectively with suppliers and
+                            customers. Overall, a SCMS can help companies improve their bottom line and achieve
+                            sustainable growth.</p>
+                        <a style="width: 100%" href="#" class="badge  p-2 bg-info ">Go to git</a>
+                    </div>
+                </div>
+            </div>
+
+
 
 
 
@@ -206,6 +241,9 @@
                 $('.filter').filter('.'+value).show('3000');
 
             }
+
+            $('.filter-button').removeClass('open');
+            $(this).addClass('open');
         });
 
     });
