@@ -146,6 +146,9 @@ header{
     .MobileImageSlider{
         display: block;
     }
+    .show{
+        display: none;
+    }
 }
 
 @media(max-width: 576px){
