@@ -172,6 +172,9 @@ header{
         left: 2rem;
         width: unset;
     }
+    .aboutContainer{
+        padding: 15px;
+    }
 }
 
 .myFooter{
@@ -232,6 +235,7 @@ header{
 .filter-button.open{
     background-color: #7cb272;
 }
+
 
 
 
