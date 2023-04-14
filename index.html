@@ -19,11 +19,15 @@
     <link rel="stylesheet" type="text/css" href="/assets/MyCSS/my-style.css"/>
     <script src="/assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js" ></script>
 
+
+    <link rel="stylesheet" href="/assets/animate/animate.min.css" />
+    <script src="/assets/wow/wow.min.js"></script>
+
 </head>
 <body>
 
 
-<header class="shadow-sm fixed-top">
+<header class="shadow-sm  fixed-top">
     <div class="navbar ">
         <div class="logo"><a >Luxshan Thavarasa</a></div>
         <ul  style="margin: 0" class="links">
@@ -32,7 +36,7 @@
             <li><a href="/views/project.html">Projects</a></li>
             <li><a href="/views/resume.html">Resume</a></li>
         </ul>
-        <a href="#myFooter" class="contact_btn">Contact Me</a>
+        <a href="#myFooter" class="contact_btn animate__animated animate__bounceIn">Contact Me</a>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -127,12 +131,12 @@
 <main>
     <div id="about"  class="container-fluid p-sm-1 p-lg-5 pt-lg-0">
         <div class="title">
-            <h3 class="text-center text-decoration-underline">ABOUT</h3>
+            <h3 class="text-center   text-decoration-underline">ABOUT</h3>
         </div>
         <div style="background:transparent" class="card shadow-sm p-3 mb-3 rounded-3">
             <div  class="about">
                 <div class="img text-center float-lg-start ">
-                    <img style="max-width: 180px;" class="rounded-circle   mt-lg-5 p-lg-2" src="/assets/default/profile.jpg">
+                    <img alt="person image" style="max-width: 180px;"  class="rounded-circle  wow animate__animated animate__zoomIn     mt-lg-5 p-lg-2" src="/assets/default/profile.jpg">
                 </div>
                 <p style="text-align: justify" class="justify-content-md-center pt-sm-1  pt-lg-5">
                     Hello and welcome to my personal website!<br>
@@ -251,6 +255,11 @@
         });
     });
 </script>
+
+<script>
+    new WOW().init();
+</script>
+
 </body>
 </html>
 
