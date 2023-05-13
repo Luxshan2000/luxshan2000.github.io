@@ -175,6 +175,10 @@ header{
     .aboutContainer{
         padding: 15px;
     }
+    .lux-image{
+        width: 100%;
+        height: auto;
+    }
 }
 
 .myFooter{
