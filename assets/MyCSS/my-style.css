@@ -237,5 +237,37 @@ header{
 }
 
 
+.lux-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 3em;
+    padding: 2em ;
+}
+
+.lux-image{
+    width: 300px;
+    height: auto;
+}
+
+.lux-caption{
+    text-align: center;
+    display: none;
+}
+.lux-card{
+    animation: wave ease-in-out 0.5s infinite alternate;
+    transform-origin: center 5px;
+}
+.lux-card:hover{
+    animation-play-state: paused;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+@keyframes wave {
+    0%{transform: rotate(5deg);}
+    100%{transform: rotate(-5deg);}
+}
+
 
 
