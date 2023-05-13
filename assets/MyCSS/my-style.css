@@ -264,7 +264,6 @@ header{
 }
 .lux-card:hover{
     animation-play-state: paused;
-    z-index: 99;
     cursor: pointer;
 }
 
