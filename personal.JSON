@@ -1,14 +1,14 @@
 {
-  users:[
+  "users":[
            {
-             name: "Luxshan",
-             age: 23,
-             uni: "UOM"
+             "name": "Luxshan",
+             "age": 23,
+             "uni": "UOM"
            },
           {
-            name:"Sharanya",
-            age: 23,
-            uni: "UVU"
+            "name":"Sharanya",
+            "age": 23,
+            "uni": "UVU"
           }
        ]
 }
