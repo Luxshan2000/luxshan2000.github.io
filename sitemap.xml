@@ -3,21 +3,11 @@
   <url>
     <loc>https://www.luxshanthavarasa.bio/</loc>
     <lastmod>2023-12-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://www.luxshanthavarasa.bio/about</loc>
-    <lastmod>2023-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.luxshanthavarasa.bio/portfolio</loc>
-    <lastmod>2023-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+ 
+
   <!-- Add more URLs for other pages on your website -->
 
 </urlset>
