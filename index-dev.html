@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img id="profile-img" src="https://via.placeholder.com/180" alt="Profile" class="profile-img">
+                <div class="profile-info">
+                    <h1 id="profile-name">Loading...</h1>
+                    <h2 id="profile-title">Loading...</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading about information...</p>
+            </div>
+            
+            <div class="content-section" style="display: none;">
+                <p id="profile-summary"></p>
+                <div id="personal-details" class="mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading education history...</p>
+            </div>
+            
+            <div id="education-container" class="content-section" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading skills...</p>
+            </div>
+            
+            <div class="content-section" style="display: none;">
+                <h3>Technical Skills</h3>
+                <div id="technical-skills-container" class="skills-container"></div>
+                
+                <h3 class="mt-4">Soft Skills</h3>
+                <div id="soft-skills-container" class="soft-skills"></div>
+                
+                <div id="languages-container" class="skills-container mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading work experience...</p>
+            </div>
+            
+            <div id="experience-container" class="content-section" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading projects...</p>
+            </div>
+            
+            <div id="projects-container" class="projects-grid content-section" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Certifications & Awards Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading certifications and achievements...</p>
+            </div>
+            
+            <div class="content-section" style="display: none;">
+                <h3>Certifications</h3>
+                <div id="certifications-container" class="cert-awards-container"></div>
+                
+                <h3 class="mt-4">Publications</h3>
+                <div id="publications-container" class="cert-awards-container"></div>
+                
+                <h3 class="mt-4">Awards & Recognition</h3>
+                <div id="awards-container" class="cert-awards-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading contact information...</p>
+            </div>
+            
+            <div class="content-section" style="display: none;">
+                <div class="contact-grid">
+                    <div id="contact-email" class="contact-item"></div>
+                    <div id="contact-phone" class="contact-item"></div>
+                    <div id="contact-location" class="contact-item"></div>
+                    <div id="contact-website" class="contact-item"></div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <p>Current Status: <span id="availability-status">Loading...</span></p>
+                </div>
+                
+                <div id="social-links" class="social-links"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© <span id="current-year">2025</span> | Personal Portfolio</p>
+            <p>Last Updated: <span id="last-updated">March 30, 2025</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
