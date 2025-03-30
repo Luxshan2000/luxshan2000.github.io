@@ -1,65 +1,42 @@
-# Professional Portfolio with Modular JSON Data Structure
+# Portfolio System with Tailwind CSS and JSON Data
 
 ## Overview
-This is a professional portfolio/resume system that separates data into modular JSON files for easy maintenance. The portfolio displays information from these JSON files using HTML, CSS, and JavaScript.
+This is a professional portfolio website that uses separate JSON files for different sections of content. This approach makes it easy to update specific parts of your portfolio without having to modify the HTML.
 
-## Directory Structure
-- `index.html` - The main HTML file that displays the portfolio
-- `data/` - Directory containing all JSON data files
-  - `about.json` - Personal details and introduction
-  - `education.json` - Educational background information
-  - `skills.json` - Skills and expertise details
-  - `experience.json` - Professional work experience
-  - `projects.json` - Projects, certifications, publications, and awards
+## File Structure
+- `index.html` - The main HTML file with Tailwind CSS styling
+- `portfolio.js` - JavaScript code to load and display data from JSON files
+- JSON data files:
+  - `personal.json` - Personal details, education, and about me information
+  - `skills.json` - Technical and soft skills
+  - `experience.json` - Work experience and professional journey
+  - `projects.json` - Projects, achievements, and certifications
   - `contact.json` - Contact information and social media links
-- `css/` - Directory containing CSS files
-  - `styles.css` - Main stylesheet
-- `js/` - Directory containing JavaScript files
-  - `main.js` - Script to load and display JSON data
 
-## How It Works
-1. The HTML file provides the structure and layout
-2. The CSS file provides styling and responsiveness
-3. The JavaScript file loads the JSON data files and populates the HTML
+## How to Update Your Portfolio
+Simply edit the corresponding JSON file to update a specific section of your portfolio:
 
-## How to Update the Portfolio
-To update any section of your portfolio, simply edit the corresponding JSON file:
+### To update personal information:
+Edit `personal.json` to change your name, title, about section, or education history.
 
-### Updating Personal Information
-Edit `data/about.json` to update:
-- Name
-- Title
-- Summary
-- Personal details (date of birth, nationality, languages, interests)
+### To update skills:
+Edit `skills.json` to modify your technical skills by category or update your soft skills.
 
-### Updating Education
-Edit `data/education.json` to update your educational background:
-- Add, edit, or remove educational institutions
-- Update degrees, fields of study, dates, locations, etc.
+### To update work experience:
+Edit `experience.json` to add, remove, or modify your work history.
 
-### Updating Skills
-Edit `data/skills.json` to update your skills:
-- Technical skills (categorized by type with proficiency levels)
-- Soft skills
-- Languages
+### To update projects, achievements, or certifications:
+Edit `projects.json` to update your projects, add new achievements, or update certification information.
 
-### Updating Professional Experience
-Edit `data/experience.json` to update your work history:
-- Add new positions
-- Update responsibilities and achievements
-- Change employment dates
+### To update contact information:
+Edit `contact.json` to change your contact details or social media links.
 
-### Updating Projects, Certifications, etc.
-Edit `data/projects.json` to update:
-- Projects (with descriptions, technologies used, etc.)
-- Certifications (with issuers, dates, etc.)
-- Publications
-- Awards and recognition
+## Viewing Your Portfolio
+To view your portfolio, simply open the `index.html` file in a web browser. 
 
-### Updating Contact Information
-Edit `data/contact.json` to update:
-- Email address
-- Phone number
-- Location
-- Social media links
-- Availability status
+**Note:** Some browsers have security restrictions that prevent loading local JSON files. If you encounter issues, you'll need to use a local web server. You can do this easily with tools like:
+- Python: `python -m http.server`
+- Node.js: `npx serve`
+
+## Customization
+The portfolio uses Tailwind CSS for styling. If you want to modify the appearance while keeping the same structure, you can edit the Tailwind classes in the `index.html` file.

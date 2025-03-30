@@ -1,36 +1,26 @@
 {
-    "email": "john.doe@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": {
-        "city": "San Francisco",
-        "state": "CA",
-        "country": "USA"
+  "email": "john.doe@example.com",
+  "phone": "+1 (555) 123-4567",
+  "location": "San Francisco, CA",
+  "social_media": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/johndoe",
+      "icon": "fab fa-linkedin"
     },
-    "social_media": [
-        {
-            "platform": "LinkedIn",
-            "url": "https://www.linkedin.com/in/johndoe",
-            "icon": "fab fa-linkedin"
-        },
-        {
-            "platform": "GitHub",
-            "url": "https://github.com/johndoe",
-            "icon": "fab fa-github"
-        },
-        {
-            "platform": "Twitter",
-            "url": "https://twitter.com/johndoe",
-            "icon": "fab fa-twitter"
-        },
-        {
-            "platform": "Medium",
-            "url": "https://medium.com/@johndoe",
-            "icon": "fab fa-medium"
-        }
-    ],
-    "website": "https://www.johndoe.com",
-    "availability": {
-        "status": "Open to opportunities",
-        "preferred_contact": "email"
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/johndoe",
+      "icon": "fab fa-github"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/johndoe",
+      "icon": "fab fa-twitter"
     }
+  ],
+  "availability": {
+    "status": "Open to opportunities",
+    "preferred_contact": "email"
+  }
 }
