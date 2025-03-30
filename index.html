@@ -66,23 +66,9 @@
             margin-top: 8px;
         }
         
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        
         .animated {
             opacity: 1;
             transform: translateY(0);
-        }
-        
-        .skill-tag {
-            transition: transform 0.2s;
-        }
-        
-        .skill-tag:hover {
-            transform: translateY(-3px);
         }
         
         .project-card {
@@ -157,6 +143,17 @@
         .timeline-content:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         @media screen and (max-width: 768px) {
@@ -642,160 +639,285 @@ G.C.E O/L 2016: 8 A, B Passes</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card animate-on-scroll">
-                    <div class="bg-primary-600 text-white p-4">
-                        <h3 class="text-xl font-semibold">Multilingual Universal SER Model</h3>
-                        <p class="text-primary-100 text-sm">Research Project | 2024 - Present</p>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-700 mb-4">A multilingual Speech Emotion Recognition (SER) initiative focused on developing a universal model capable of recognizing speech emotions across 15+ languages.</p>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Key Contributions:</h4>
-                        <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                            <li>Created a Tamil Speech Emotion Recognition (SER) dataset focused on Sri Lankan Tamil dialects</li>
+    <!-- Projects Section -->
+<section id="projects" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Projects</h2>
         
-                            <li>Surveyed existing SER models and datasets across multiple languages globally, focusing on Dravidian languages</li>
-        
-                            <li>Training a universal model capable of handling speech emotions in 15+ languages with a proposed architecture</li>
-        
-                        </ul>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Technologies Used:</h4>
-                        <div class="flex flex-wrap gap-2">
-    
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Python</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">PyTorch</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Transformers</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">CNN</span>
-        
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card animate-on-scroll">
-                    <div class="bg-primary-600 text-white p-4">
-                        <h3 class="text-xl font-semibold">DBreeze</h3>
-                        <p class="text-primary-100 text-sm">Database Interaction Application | 2024</p>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-700 mb-4">A chatbot application enabling database interaction via Large Language Models (LLMs) for query generation and validation.</p>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Key Contributions:</h4>
-                        <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                            <li>Developed a chatbot application enabling database interaction via Large Language Models (LLMs) for query generation and validation</li>
-        
-                            <li>Implemented error handling and feedback loops for query syntax and read-only access validation</li>
-        
-                            <li>Benchmarking methodologies for cost and evaluation metrics</li>
-        
-                        </ul>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Technologies Used:</h4>
-                        <div class="flex flex-wrap gap-2">
-    
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Python</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">React</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">TypeScript</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">TailwindCSS</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Keycloak</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">FastAPI</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Docker</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">PostgreSQL</span>
-        
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card animate-on-scroll">
-                    <div class="bg-primary-600 text-white p-4">
-                        <h3 class="text-xl font-semibold">QuickChat - Chrome Extension</h3>
-                        <p class="text-primary-100 text-sm">Individual Project | May 2024 - July 2024</p>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-700 mb-4">A Chrome extension that adds a help chatbot to any website's bottom-right corner with real-time responses.</p>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Key Contributions:</h4>
-                        <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                            <li>Developed a Chrome extension that adds a help chatbot to any website's bottom-right corner with real-time responses using GPT 3.5</li>
-        
-                            <li>Implemented web scraping and Chroma DB for dynamic content handling (RAG), leveraging OpenAI embeddings for accurate chatbot responses</li>
-        
-                        </ul>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Technologies Used:</h4>
-                        <div class="flex flex-wrap gap-2">
-    
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">HTML</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">CSS</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">JavaScript</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">RAG</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">ChromaDB</span>
-        
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="bg-white rounded-xl overflow-hidden shadow-md project-card animate-on-scroll">
-                    <div class="bg-primary-600 text-white p-4">
-                        <h3 class="text-xl font-semibold">Drive Smart Application</h3>
-                        <p class="text-primary-100 text-sm">Group Project | July 2023 - October 2023</p>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-700 mb-4">An online learning platform to prepare individuals for the Sri Lankan driver's license test exam.</p>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Key Contributions:</h4>
-                        <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                            <li>Developed mobile and web apps for Sri Lankan driver's license tests with React, React Native, and MongoDB</li>
-        
-                            <li>Implemented OAuth 2.0, JWT, and CI/CD using GitHub Actions, Docker, and AWS</li>
-        
-                        </ul>
-                        
-                        <h4 class="text-md font-medium text-gray-800 mb-2">Technologies Used:</h4>
-                        <div class="flex flex-wrap gap-2">
-    
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">React</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">React Native</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Docker</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">CI/CD</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Github Actions</span>
-        
-                            <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">MongoDB</span>
-        
-                        </div>
-                    </div>
-                </div>
-    
+        <!-- Project Filters -->
+        <div class="mb-8">
+            <div class="flex flex-wrap gap-2 justify-center">
+                <button class="filter-btn active bg-primary-600 text-white px-4 py-2 rounded-lg text-sm transition-all hover:bg-primary-700" data-filter="all">All Projects</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm transition-all hover:bg-gray-300" data-filter="research">Research</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm transition-all hover:bg-gray-300" data-filter="application">Applications</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm transition-all hover:bg-gray-300" data-filter="academic">Academic</button>
             </div>
         </div>
-    </section>
+        
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Projects will be displayed here -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+            <div id="pagination" class="flex space-x-2">
+                <!-- Pagination buttons will be generated here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // All projects data
+        const allProjects = [
+            {
+                title: "Multilingual Universal SER Model",
+                period: "Research Project | 2024 - Present",
+                description: "A multilingual Speech Emotion Recognition (SER) initiative focused on developing a universal model capable of recognizing speech emotions across 15+ languages.",
+                contributions: [
+                    "Created a Tamil Speech Emotion Recognition (SER) dataset focused on Sri Lankan Tamil dialects",
+                    "Surveyed existing SER models and datasets across multiple languages globally, focusing on Dravidian languages",
+                    "Training a universal model capable of handling speech emotions in 15+ languages with a proposed architecture"
+                ],
+                technologies: ["Python", "PyTorch", "Transformers", "CNN"],
+                category: "research"
+            },
+            {
+                title: "DravidaKavacham – Abusive Content Detection",
+                period: "Research Project | Dec 2024",
+                description: "An open-source tool for detecting abusive Tamil and Malayalam content, with a focus on harmful language targeting women.",
+                contributions: [
+                    "Built as part of DravidianLangTech @ NAACL 2025",
+                    "Leveraged NLP and machine learning for accurate text classification and content analysis",
+                    "Focused on detecting and flagging harmful language targeting women in Dravidian languages"
+                ],
+                technologies: ["Python", "NLP", "Machine Learning", "Text Classification"],
+                category: "research"
+            },
+            {
+                title: "DBreeze",
+                period: "Database Interaction Application | 2024",
+                description: "A chatbot application enabling database interaction via Large Language Models (LLMs) for query generation and validation.",
+                contributions: [
+                    "Developed a chatbot application enabling database interaction via Large Language Models (LLMs) for query generation and validation",
+                    "Implemented error handling and feedback loops for query syntax and read-only access validation",
+                    "Benchmarking methodologies for cost and evaluation metrics"
+                ],
+                technologies: ["Python", "React", "TypeScript", "TailwindCSS", "Keycloak", "FastAPI", "Docker", "PostgreSQL"],
+                category: "application"
+            },
+            {
+                title: "QuickChat - Chrome Extension",
+                period: "Individual Project | May 2024 - July 2024",
+                description: "A Chrome extension that adds a help chatbot to any website's bottom-right corner with real-time responses.",
+                contributions: [
+                    "Developed a Chrome extension that adds a help chatbot to any website's bottom-right corner with real-time responses using GPT 3.5",
+                    "Implemented web scraping and Chroma DB for dynamic content handling (RAG), leveraging OpenAI embeddings for accurate chatbot responses"
+                ],
+                technologies: ["HTML", "CSS", "JavaScript", "RAG", "ChromaDB"],
+                category: "application"
+            },
+            {
+                title: "Drive Smart Application",
+                period: "Group Project | July 2023 - October 2023",
+                description: "An online learning platform to prepare individuals for the Sri Lankan driver's license test exam.",
+                contributions: [
+                    "Developed mobile and web apps for Sri Lankan driver's license tests with React, React Native, and MongoDB",
+                    "Implemented OAuth 2.0, JWT, and CI/CD using GitHub Actions, Docker, and AWS"
+                ],
+                technologies: ["React", "React Native", "Docker", "CI/CD", "Github Actions", "MongoDB"],
+                category: "application"
+            },
+            {
+                title: "Supply Chain Management System",
+                period: "Academic Project | Sep 2022 - Jan 2023",
+                description: "A web-based Supply Chain Management System (SCMS) for online shopping, developed collaboratively with a team of 5 members.",
+                contributions: [
+                    "Utilized HTML, CSS, and JavaScript with Bootstrap 5.0 for front-end development",
+                    "Employed PHP and MySQL for back-end development",
+                    "Designed the RDBMS for efficient data management and implemented triggers and functions"
+                ],
+                technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "RDBMS"],
+                category: "academic"
+            },
+            {
+                title: "Email Client",
+                period: "Academic Project | Jul 2022 - Aug 2022",
+                description: "A console-based Email Client application developed as part of an academic module, utilizing Java programming language and OOP concepts.",
+                contributions: [
+                    "Implemented contact management for storing and managing contact details including birthdays",
+                    "Created email sending capabilities directly from the console interface",
+                    "Developed automated birthday wishes functionality and email history tracking"
+                ],
+                technologies: ["Java", "OOP", "Design Patterns"],
+                category: "academic"
+            }
+        ];
+        
+        // Pagination variables
+        const projectsPerPage = 4;
+        let currentPage = 1;
+        let filteredProjects = [...allProjects];
+        
+        // Function to render projects
+        function renderProjects() {
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = '';
+            
+            // Calculate start and end indices for current page
+            const startIndex = (currentPage - 1) * projectsPerPage;
+            const endIndex = Math.min(startIndex + projectsPerPage, filteredProjects.length);
+            
+            // Get projects for current page
+            const currentProjects = filteredProjects.slice(startIndex, endIndex);
+            
+            // Render each project
+            currentProjects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'bg-white rounded-xl overflow-hidden shadow-md project-card animate-on-scroll';
+                projectCard.setAttribute('data-category', project.category);
+                
+                let technologiesHTML = '';
+                project.technologies.forEach(tech => {
+                    technologiesHTML += `<span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">${tech}</span>`;
+                });
+                
+                let contributionsHTML = '';
+                project.contributions.forEach(contribution => {
+                    contributionsHTML += `<li>${contribution}</li>`;
+                });
+                
+                projectCard.innerHTML = `
+                    <div class="bg-primary-600 text-white p-4">
+                        <h3 class="text-xl font-semibold">${project.title}</h3>
+                        <p class="text-primary-100 text-sm">${project.period}</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">${project.description}</p>
+                        
+                        <h4 class="text-md font-medium text-gray-800 mb-2">Key Contributions:</h4>
+                        <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
+                            ${contributionsHTML}
+                        </ul>
+                        
+                        <h4 class="text-md font-medium text-gray-800 mb-2">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            ${technologiesHTML}
+                        </div>
+                    </div>
+                `;
+                
+                projectsContainer.appendChild(projectCard);
+            });
+            
+            // Initialize animation on scroll for newly added elements
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Update pagination
+            renderPagination();
+        }
+        
+        // Function to render pagination
+        function renderPagination() {
+            const paginationContainer = document.getElementById('pagination');
+            paginationContainer.innerHTML = '';
+            
+            const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+            
+            // Previous button
+            if (totalPages > 1) {
+                const prevButton = document.createElement('button');
+                prevButton.className = `px-3 py-1 rounded-md ${currentPage === 1 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
+                prevButton.innerHTML = '&laquo;';
+                prevButton.disabled = currentPage === 1;
+                prevButton.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderProjects();
+                        window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, behavior: 'smooth' });
+                    }
+                });
+                paginationContainer.appendChild(prevButton);
+            }
+            
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.className = `px-3 py-1 rounded-md ${i === currentPage ? 'bg-primary-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
+                pageButton.textContent = i;
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    renderProjects();
+                    window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, behavior: 'smooth' });
+                });
+                paginationContainer.appendChild(pageButton);
+            }
+            
+            // Next button
+            if (totalPages > 1) {
+                const nextButton = document.createElement('button');
+                nextButton.className = `px-3 py-1 rounded-md ${currentPage === totalPages ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
+                nextButton.innerHTML = '&raquo;';
+                nextButton.disabled = currentPage === totalPages;
+                nextButton.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderProjects();
+                        window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, behavior: 'smooth' });
+                    }
+                });
+                paginationContainer.appendChild(nextButton);
+            }
+        }
+        
+        // Filter projects
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-primary-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                this.classList.add('active', 'bg-primary-600', 'text-white');
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Filter projects
+                if (filter === 'all') {
+                    filteredProjects = [...allProjects];
+                } else {
+                    filteredProjects = allProjects.filter(project => project.category === filter);
+                }
+                
+                // Reset to first page when filter changes
+                currentPage = 1;
+                
+                // Render projects with new filter
+                renderProjects();
+            });
+        });
+        
+        // Initial render
+        renderProjects();
+    });
+</script>
+
 
     <!-- Achievements Section -->
     <section id="achievements" class="py-16 bg-primary-50">
@@ -1042,5 +1164,6 @@ G.C.E O/L 2016: 8 A, B Passes</p>
         // Listen for scroll events
         window.addEventListener('scroll', checkScroll);
     </script>
+    
 </body>
 </html>
