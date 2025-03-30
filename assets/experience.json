@@ -1,0 +1,60 @@
+{
+    "work_experience": [
+        {
+            "company": "Tech Innovations Inc.",
+            "position": "Senior Software Engineer",
+            "location": "San Francisco, CA",
+            "start_date": "2019-03",
+            "end_date": "Present",
+            "description": "Leading a team of 5 developers in building scalable microservices architecture for the company's flagship product.",
+            "responsibilities": [
+                "Architected and implemented RESTful APIs using Node.js and Express",
+                "Developed front-end components using React and Redux",
+                "Implemented CI/CD pipeline using Jenkins and Docker",
+                "Conducted code reviews and mentored junior developers",
+                "Collaborated with product managers to define feature specifications"
+            ],
+            "achievements": [
+                "Reduced API response time by 40% through code optimization",
+                "Implemented automated testing that increased code coverage to 85%",
+                "Led migration from monolithic to microservices architecture"
+            ],
+            "technologies": [
+                "JavaScript",
+                "React",
+                "Node.js",
+                "Docker",
+                "Jenkins",
+                "AWS"
+            ]
+        },
+        {
+            "company": "DataSoft Systems",
+            "position": "Full Stack Developer",
+            "location": "Seattle, WA",
+            "start_date": "2016-07",
+            "end_date": "2019-02",
+            "description": "Worked on the development and maintenance of the company's web-based data analytics platform.",
+            "responsibilities": [
+                "Developed and maintained front-end components using Angular",
+                "Built back-end services using Java Spring Boot",
+                "Designed and implemented database schemas (PostgreSQL)",
+                "Created data visualization dashboards using D3.js",
+                "Participated in agile development processes"
+            ],
+            "achievements": [
+                "Implemented feature that increased user engagement by 25%",
+                "Optimized database queries resulting in 30% faster data retrieval",
+                "Received 'Employee of the Quarter' recognition for Q3 2018"
+            ],
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "Angular",
+                "PostgreSQL",
+                "D3.js",
+                "Docker"
+            ]
+        }
+    ]
+}

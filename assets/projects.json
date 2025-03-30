@@ -1,0 +1,93 @@
+{
+    "projects": [
+        {
+            "name": "E-commerce Platform Redesign",
+            "role": "Lead Developer",
+            "start_date": "2021-01",
+            "end_date": "2021-06",
+            "description": "Redesigned and rebuilt the company's e-commerce platform to improve user experience and increase sales conversion rates.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Redux",
+                "AWS"
+            ],
+            "highlights": [
+                "Implemented responsive design that improved mobile user engagement by 35%",
+                "Integrated payment gateway systems with enhanced security features",
+                "Optimized site loading speed by 50% through code splitting and lazy loading"
+            ],
+            "url": "https://example.com/ecommerce-project",
+            "image": "assets/projects/ecommerce.jpg"
+        },
+        {
+            "name": "Machine Learning Recommendation Engine",
+            "role": "ML Engineer",
+            "start_date": "2020-07",
+            "end_date": "2020-12",
+            "description": "Developed a recommendation engine for a streaming service that suggests content based on user viewing history and preferences.",
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "scikit-learn",
+                "Flask",
+                "AWS SageMaker"
+            ],
+            "highlights": [
+                "Achieved 28% improvement in user content engagement",
+                "Implemented collaborative filtering and content-based filtering algorithms",
+                "Built real-time API that delivers recommendations within 100ms"
+            ],
+            "url": "https://github.com/johndoe/recommendation-engine",
+            "image": "assets/projects/recommendation.jpg"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "AWS Certified Solutions Architect",
+            "issuer": "Amazon Web Services",
+            "date": "2022-03",
+            "expires": "2025-03",
+            "description": "Validated expertise in designing distributed systems on AWS",
+            "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+            "image": "assets/certifications/aws-solutions-architect.jpg"
+        },
+        {
+            "name": "TensorFlow Developer Certificate",
+            "issuer": "Google",
+            "date": "2021-05",
+            "expires": "None",
+            "description": "Demonstrated proficiency in using TensorFlow to implement machine learning models",
+            "url": "https://www.tensorflow.org/certificate",
+            "image": "assets/certifications/tensorflow-developer.jpg"
+        }
+    ],
+    "publications": [
+        {
+            "title": "Optimizing Neural Networks for Mobile Devices",
+            "publisher": "IEEE Software Engineering Conference",
+            "date": "2022-07",
+            "description": "Research paper on techniques to optimize neural networks for deployment on resource-constrained mobile devices",
+            "url": "https://example.com/publication1",
+            "co_authors": [
+                "Dr. Jane Smith",
+                "Prof. Robert Johnson"
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Innovation Award",
+            "issuer": "Tech Innovations Inc.",
+            "date": "2021-12",
+            "description": "Recognized for developing an innovative solution that increased company revenue by 15%"
+        },
+        {
+            "title": "Hackathon Winner",
+            "issuer": "TechCrunch Disrupt",
+            "date": "2020-05",
+            "description": "First place in the annual hackathon for developing a real-time language translation app"
+        }
+    ]
+}

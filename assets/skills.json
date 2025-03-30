@@ -1,0 +1,102 @@
+{
+    "technical_skills": [
+        {
+            "category": "Programming Languages",
+            "skills": [
+                {
+                    "name": "JavaScript",
+                    "level": 90
+                },
+                {
+                    "name": "Python",
+                    "level": 85
+                },
+                {
+                    "name": "Java",
+                    "level": 80
+                },
+                {
+                    "name": "C++",
+                    "level": 70
+                },
+                {
+                    "name": "SQL",
+                    "level": 85
+                }
+            ]
+        },
+        {
+            "category": "Web Technologies",
+            "skills": [
+                {
+                    "name": "React",
+                    "level": 90
+                },
+                {
+                    "name": "Angular",
+                    "level": 75
+                },
+                {
+                    "name": "Node.js",
+                    "level": 85
+                },
+                {
+                    "name": "HTML5/CSS3",
+                    "level": 95
+                },
+                {
+                    "name": "RESTful APIs",
+                    "level": 90
+                }
+            ]
+        },
+        {
+            "category": "Tools & Platforms",
+            "skills": [
+                {
+                    "name": "Git",
+                    "level": 90
+                },
+                {
+                    "name": "Docker",
+                    "level": 80
+                },
+                {
+                    "name": "AWS",
+                    "level": 75
+                },
+                {
+                    "name": "Jenkins",
+                    "level": 70
+                },
+                {
+                    "name": "Kubernetes",
+                    "level": 65
+                }
+            ]
+        }
+    ],
+    "soft_skills": [
+        "Leadership",
+        "Team Collaboration",
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Critical Thinking",
+        "Adaptability"
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "level": "Native"
+        },
+        {
+            "name": "Spanish",
+            "level": "Intermediate"
+        },
+        {
+            "name": "French",
+            "level": "Basic"
+        }
+    ]
+}
