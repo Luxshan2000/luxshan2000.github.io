@@ -7,9 +7,9 @@ Professional academic-style portfolio website for Luxshan Thavarasa, featuring a
 - ✨ **Dark/Light Theme Toggle** - Seamless theme switching with localStorage persistence
 - 📱 **Fully Responsive Design** - Optimized for desktop, tablet, and mobile devices
 - 🎓 **Academic Design** - Clean, professional styling suitable for academic portfolios
-- 🧪 **Playwright Testing** - Comprehensive test suite for quality assurance
 - ⚡ **Fast Performance** - Pure HTML/CSS/JS with no external dependencies
 - 🔗 **Smooth Navigation** - Internal anchor links with smooth scrolling
+- 🎨 **Professional Layout** - Clean, minimal design focused on content
 
 ## Sections
 - **About** - Professional summary and research focus
@@ -24,9 +24,9 @@ Professional academic-style portfolio website for Luxshan Thavarasa, featuring a
 
 ## Technical Stack
 - **Frontend**: HTML5, CSS3 (CSS Variables), JavaScript ES6+
-- **Testing**: Playwright for automated testing
 - **Design**: Academic-style responsive design with theme support
 - **Performance**: Optimized for fast loading and accessibility
+- **Compatibility**: Works across all modern browsers
 
 ## Theme Support
 The website includes a sophisticated dark/light theme system:
@@ -38,21 +38,10 @@ The website includes a sophisticated dark/light theme system:
 ## Local Development
 1. Clone the repository
 2. Open `index.html` in a web browser
-3. For testing: `npm install` and `npm test`
+3. No build process required - pure HTML/CSS/JS
 
-## Testing
-Comprehensive Playwright test suite covering:
-- Theme toggle functionality
-- Responsive design across devices
-- Navigation and anchor links
-- Content verification
-- Accessibility checks
-
-Run tests:
-```bash
-npm test                # Headless testing
-npm run test:headed     # Visual testing
-```
+## Usage
+Simply open the `index.html` file in any modern web browser to view the portfolio. The website is fully self-contained with no external dependencies.
 
 ## Browser Support
 - Modern browsers (Chrome 80+, Firefox 75+, Safari 13+, Edge 80+)
