@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://luxshan2000.github.io/sitemap.xml
+
+# Allow all crawlers access to CSS and JS files
+Allow: *.css
+Allow: *.js
+
+# Allow image files
+Allow: /assets/
+
+# Crawl-delay (optional, in seconds)
+Crawl-delay: 1
