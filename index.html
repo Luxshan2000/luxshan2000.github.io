@@ -1,1154 +1,652 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Personal, Luxshan, CSE, Student, Moratuwa">
-    <meta name="description" content="Thavarasa Luxshan is a Computer Science and Engineering student at the University of Moratuwa, Sri Lanka.">
+    <meta name="description" content="Luxshan Thavarasa - Software Engineer at H2O.ai | Research Enthusiast | CSE @ University of Moratuwa">
     <meta name="author" content="Luxshan Thavarasa">
-    <link rel="shortcut icon" href="/assets/webIcon.png" type="image/png">
-    <meta property="og:image" content="https://github.com/Luxshan2000/luxshan2000.github.io/raw/main/assets/profile.jpg">
-
-    <meta name="language" content="english">
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content=”notranslate” /> 
-    <meta name="rating" content="G">
-    <meta name="copyright" content="Copyright 2025">
-    <title>Luxshan Thavarasa - Portfolio</title>
+    <link rel="shortcut icon" href="./assets/webIcon.png" type="image/png">
+    <title>Luxshan Thavarasa's Homepage</title>
     
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configure Tailwind with light blue theme -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        };
-    </script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom Styles -->
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-bg: #f8f9fa;
+            --border-color: #e1e5e9;
+            --accent-color: #3498db;
+            --secondary-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --link-color: #3498db;
+            --emphasis-bg: #fff;
+            --emphasis-color: #666;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e4e4e4;
+            --header-bg: #2d2d2d;
+            --border-color: #404040;
+            --accent-color: #64b5f6;
+            --secondary-bg: #2d2d2d;
+            --card-bg: #252525;
+            --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            --link-color: #81c784;
+            --emphasis-bg: #333333;
+            --emphasis-color: #b8b8b8;
+        }
+
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            font-family: Georgia, 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
         
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #0ea5e9;
-            margin-top: 8px;
-        }
-        
-        .animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Timeline Styles */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle:hover {
+            opacity: 0.9;
         }
         
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #0ea5e9;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+        .header {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 160px;
+            height: 200px;
+            margin-right: 30px;
+            flex-shrink: 0;
+            border: 2px solid var(--border-color);
+        }
+        
+        .header-info h1 {
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .motto {
+            font-style: italic;
+            color: var(--accent-color);
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .header-info p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+        
+        .header-info strong {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .contact-links {
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        
+        .contact-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 12px;
+        }
+        
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 30px 0;
+        }
+        
+        .nav-links {
+            font-size: 13px;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            background: var(--secondary-bg);
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .nav-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            font-size: 20px;
+            margin: 35px 0 15px 0;
+            font-weight: bold;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            font-size: 17px;
+            margin: 25px 0 10px 0;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        h4 {
+            font-size: 15px;
+            margin: 18px 0 8px 0;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .work-item, .education-item, .project-item, .cert-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: var(--secondary-bg);
+            border-left: 4px solid var(--accent-color);
             border-radius: 3px;
         }
         
-        .timeline-container {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            animation: fadeIn 1s;
+        .date {
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 13px;
+            font-weight: 500;
         }
         
-        .timeline-container.left {
-            left: 0;
+        .company-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 500;
         }
         
-        .timeline-container.right {
-            left: 50%;
+        .company-link:hover {
+            text-decoration: underline;
         }
         
-        .timeline-container::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            top: 22px;
-            border-radius: 50%;
-            z-index: 1;
-            border: 4px solid #0ea5e9;
-            background-color: white;
+        ul {
+            margin: 12px 0;
+            padding-left: 25px;
         }
         
-        .timeline-container.right::after {
-            left: -10px;
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+            text-align: justify;
         }
         
-        .timeline-content {
-            padding: 20px 25px;
-            background-color: white;
-            position: relative;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .skills-grid {
+            margin: 15px 0;
+            background: var(--secondary-bg);
+            padding: 15px;
+            border-radius: 5px;
         }
         
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        .skills-grid p {
+            margin: 8px 0;
+            font-size: 14px;
         }
         
-        .fade-in {
-            opacity: 1;
-            transform: translateY(0);
+        .publication-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--secondary-bg);
+            border-left: 4px solid #e74c3c;
+            border-radius: 3px;
         }
         
-        @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
+        .publication-title {
+            font-weight: bold;
+            color: #c0392b;
+            font-size: 15px;
+        }
+        
+        .publication-venue {
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 13px;
+        }
+        
+        .contact-form {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        
+        .contact-form h3 {
+            margin-top: 0;
+            color: var(--text-color);
+        }
+        
+        .contact-form p {
+            margin: 12px 0;
+            font-size: 14px;
+        }
+        
+        .summary-box {
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .achievement-highlight {
+            background: var(--secondary-bg);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+            margin: 10px 0;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-color);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
             }
             
-            .timeline-container {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 25px;
+                align-self: center;
+                width: 150px;
+                height: 180px;
             }
             
-            .timeline-container.right {
-                left: 0%;
+            .nav-links {
+                font-size: 13px;
+                padding: 15px;
             }
             
-            .timeline-container.left::after, 
-            .timeline-container.right::after {
-                left: 21px;
+            .nav-links a {
+                display: inline-block;
+                margin: 5px;
+                padding: 8px 12px;
             }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            
+            .theme-toggle {
+                position: fixed !important;
+                top: 15px !important;
+                right: 15px !important;
+                z-index: 1001 !important;
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+            
+            .container {
+                padding: 10px;
+                padding-top: 60px;
+            }
+            
+            h1 {
+                font-size: 28px !important;
+            }
+            
+            .work-item, .education-item, .project-item, .cert-item {
+                padding: 20px;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header/Navbar -->
-    <header class="fixed w-full bg-white shadow-sm z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-primary-600 font-bold text-xl">Luxshan.dev</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-4">
-                        <a href="#home" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Home</a>
-                        <a href="#about" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">About</a>
-                        <a href="#education" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Education</a>
-                        <a href="#skills" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Skills</a>
-                        <a href="#experience" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Experience</a>
-                        <a href="#projects" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Projects</a>
-                        <a href="#achievements" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Achievements</a>
-                        <a href="#certifications" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Certifications</a>
-                        <a href="#contact" class="text-gray-700 hover:text-primary-500 px-3 py-2 rounded-md font-medium">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary-500">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile menu, show/hide based on menu state -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#home" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">About</a>
-                    <a href="#education" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Education</a>
-                    <a href="#skills" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
-                    <a href="#experience" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
-                    <a href="#projects" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                    <a href="#achievements" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Achievements</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary-500 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-12 bg-gradient-to-br from-primary-50 via-white to-primary-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        Hi, I'm <span class="text-primary-600">Luxshan Thavarasa</span>
-                    </h1>
-                    <h2 class="text-xl md:text-2xl text-gray-600 mb-6">Software Engineering Intern at H2O.ai</h2>
-                    <p class="text-gray-600 mb-8 text-lg">An adaptable and collaborative professional, passionate about innovative software engineering and AI-driven solutions, dedicated to leveraging emerging technologies to deliver impactful outcomes.</p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
-                            Contact Me
-                        </a>
-                        <a href="#projects" class="bg-white hover:bg-gray-100 text-primary-500 font-medium py-2 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg border border-primary-300">
-                            View My Work
-                        </a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex flex-col items-center">
-                    <div class="bg-white p-2 rounded-full shadow-xl">
-                        <div class="rounded-full overflow-hidden h-64 w-64 border-4 border-primary-200">
-                            <img src="/assets/profile.jpg" class="d-block w-100" alt="Luxshan Thavarasa">
-                        </div>
-                    </div>
-                    <!-- Social icons -->
-                    <div class="flex justify-center space-x-6 mt-4">
-                        <a href="mailto:luxshan.20@cse.mrt.ac.lk" class="text-gray-600 hover:text-primary-500">
-                            <i class="fas fa-envelope text-2xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/lux-thavarasa" target="_blank" class="text-gray-600 hover:text-primary-500">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="https://github.com/luxshan2000" target="_blank" class="text-gray-600 hover:text-primary-500">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=Do87138AAAAJ&hl=en" target="_blank" class="text-gray-600 hover:text-primary-500">
-                            <i class="fas fa-graduation-cap text-2xl"></i>
-                        </a>
-                    </div>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        🌙 Dark Mode
+    </button>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="./assets/profile.jpg" alt="Luxshan Thavarasa" class="profile-img">
+            <div class="header-info">
+                <h1>Luxshan Thavarasa</h1>
+                <div class="motto">"Seeing the unseen, shaping the future."</div>
+                <p><strong>Software Engineer</strong> @ <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a> | Research Enthusiast | CSE @ University of Moratuwa</p>
+                <p><strong>Location:</strong> Visuvamadu East, Visuvamadu, Mullaitivu, Northern Province, Sri Lanka</p>
+                <p><strong>Email:</strong> luxshan2327 [AT] gmail.com</p>
+                <div class="contact-links">
+                    <strong>Connect:</strong>
+                    <a href="mailto:luxshan2327@gmail.com">Email</a> |
+                    <a href="https://linkedin.com/in/lux-thavarasa" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/luxshan2000" target="_blank">GitHub</a> |
+                    <a href="tel:+94773038402">Mobile: 077-3038402</a>
                 </div>
             </div>
         </div>
-        
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">About Me</h2>
-            <div class="bg-primary-50 rounded-xl p-6 shadow-md">
-                <div class="flex flex-col md:flex-row items-start">
-                    <div class="md:w-2/3 md:pr-8 mb-6 md:mb-0">
-                        <p class="text-gray-700 mb-4">I am a final year CSE undergraduate at the University of Moratuwa, currently working as a Software Engineering Intern at H2O.ai. I'm passionate about full-stack development, UX/UI design, and artificial intelligence.</p>
-                        <p class="text-gray-700 mb-4">My experience spans both front-end and back-end technologies, with particular interests in React, FastAPI, Python, and machine learning. I enjoy building applications that solve practical problems and deliver excellent user experiences.</p>
-                        <p class="text-gray-700">I'm currently focused on Speech Emotion Recognition research and developing agentic applications that leverage AI capabilities.</p>
-                    </div>
-                    <div class="md:w-1/3 bg-white rounded-lg p-6 shadow-sm">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Personal Details</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-primary-500 mt-1 mr-3"></i>
-                                <span class="text-gray-700">Neththaliyaru, Visuvamadu, Mullaithivu, Sri Lanka</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-envelope text-primary-500 mt-1 mr-3"></i>
-                                <span class="text-gray-700">luxshanlux2000@gmail.com</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-language text-primary-500 mt-1 mr-3"></i>
-                                <span class="text-gray-700">
-English (Fluent), Tamil (Native)
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Navigation -->
+        <div class="nav-links">
+            <a href="#about">About</a> / <a href="#experience">Experience</a> / <a href="#education">Education</a> / <a href="#projects">Projects</a> / <a href="#publications">Publications</a> / <a href="#skills">Skills</a> / <a href="#certifications">Certifications</a> / <a href="#awards">Awards</a> / <a href="#contact">Contact</a>
+        </div>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <h2>About</h2>
+            <div class="summary-box">
+                <p>Final-year Computer Science and Engineering student at the <a href="https://uom.lk" target="_blank" class="company-link">University of Moratuwa</a> with a passion for Full Stack Development and Artificial Intelligence. My research focuses on Speech Emotion Recognition (SER) for low-resource languages, aiming to bring AI advancements to diverse linguistic communities.</p>
+                
+                <p>I enjoy working in collaborative environments and thrive on creating innovative solutions that make complex data accessible and meaningful to users. I'm eager to connect with like-minded individuals and work on projects that push the boundaries of technology.</p>
+            </div>
+            
+            <p><strong>Research Focus:</strong> Speech Emotion Recognition · Natural Language Processing · Agentic AI Systems · Full-Stack Development</p>
+            
+            <p><strong>Languages:</strong> Tamil (Native), English (Professional Working)</p>
+            
+            <p><strong>Current Role:</strong> Software Engineer at <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a>, developing frontend and backend solutions for H2OGPTe and Agentic Applications.</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+            
+            <h3>Professional</h3>
+            
+            <div class="work-item">
+                <h4>Software Engineer, <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a> (Colombo, Sri Lanka)</h4>
+                <div class="date">July 2025 – Present (2 months)</div>
+                <p><strong>H2OGPTe:</strong> Developing the frontend with a strong focus on UI/UX for agent interactions, while contributing to backend improvements to ensure seamless functionality.</p>
+            </div>
+
+            <div class="work-item">
+                <h4>Intern Engineering - Software, <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a> (Colombo, Sri Lanka)</h4>
+                <div class="date">November 2023 – July 2025 (1 year 9 months)</div>
+                <ul>
+                    <li><strong>H2OGPTe:</strong> Developed frontend with focus on UI/UX for agent interactions while contributing to backend enhancements for seamless functionality</li>
+                    <li><strong>Agentic Application:</strong> Worked on both frontend and backend development using React with Fluent UI and H2O UI tools for frontend, and FastAPI with PostgreSQL for backend</li>
+                    <li><strong>ChurnApp:</strong> Created application to predict customer churn for H2O.ai. Trained model with H2O Driverless AI and deployed in MLOps environment. Integrated Salesforce and helpdesk data with React frontend and FastAPI backend</li>
+                    <li><strong>Olympic App:</strong> Developed platform for conducting hackathons, including participant and administrative applications using H2O Wave and PostgreSQL</li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h4>Full-stack Developer, <a href="https://aaivu.org" target="_blank" class="company-link">aaivu</a> (Colombo, Sri Lanka)</h4>
+                <div class="date">January 2023 – June 2025 (2 years 6 months)</div>
+                <p><strong>Rtuthaya Website:</strong> Contributed to the development of Dr. Uthayasankar Thayasivam's website. Managed content creators and guided new juniors in enhancing the application. Key contributions included project page and conference page development using PHP, MySQL, HTML, CSS, JavaScript, and Bootstrap.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Education Section -->
+        <div class="section" id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h4>BSc Eng Hons, Computer Science & Engineering</h4>
+                <h4><a href="https://uom.lk" target="_blank" class="company-link">University of Moratuwa</a>, Sri Lanka</h4>
+                <div class="date">March 2021 – May 2025</div>
+                <ul>
+                    <li><strong>Specialization:</strong> Computer Science and Engineering</li>
+                    <li><strong>Key Skills Developed:</strong> Project Documentation, Computer Science, MySQL, Flask, NumPy, Software Development, Problem Solving, Software Architecture, Python, Data Structures, Java, Web Services, Mathematics, Solution Architecture, Software Quality, Technical Documentation, Analytical Skills, Leadership, Test Cases, API Development, SQL, RDBMS, Pandas, Communication, Test Planning, Scripting, Architecture Development, Generative AI, C++, Unit Testing</li>
+                    <li><strong>Final Year Project:</strong> Multilingual Universal Speech Emotion Recognition Model</li>
+                </ul>
+            </div>
 
-                <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll">
-                    <div class="mb-4">
-                        <h3 class="text-xl font-semibold text-gray-800">University Of Moratuwa, Sri Lanka</h3>
-                        <p class="text-primary-600">Bachelor of the Science of Engineering (Honors) in Computer Science and Engineering</p>
-                        <p class="text-gray-500 text-sm">2021 – Present</p>
-                    </div>
-    
-                    <div>
-                        <h4 class="text-lg font-medium text-gray-800 mb-2">Relevant Coursework</h4>
-                        <div class="flex flex-wrap gap-2">
-        
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Software Engineering</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Data Structures and Algorithms</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Database Systems</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Program Construction</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Advanced Software Engineering</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Computer Security</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Software Engineering Project</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Programming Fundamentals</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Programming Languages</span>
-            
-                            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">Introduction to Artificial Intelligence</span>
-            
-                        </div>
-                    </div>
-        
+            <div class="education-item">
+                <h4>Secondary Education</h4>
+                <h4>Mu/Visuvamadu Maha Vidyalayam, Mullaitivu, Sri Lanka</h4>
+                <div class="date">January 2011 – August 2019</div>
+                <div class="achievement-highlight">
+                    <p><strong>G.C.E. (A/L) Examination 2019:</strong> 3A grades | Physical Science stream | Island Rank: 209 | Z-Score: 2.4704</p>
+                    <p><strong>G.C.E. (O/L) Examination 2016:</strong> 8A, 1B | Including Mathematics, Science, English, and Business & Accounts</p>
                 </div>
-    
-                <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll">
-                    <div class="mb-4">
-                        <h3 class="text-xl font-semibold text-gray-800">Visuvamadu Maha Vidyalayam, Mullaithivu, Sri Lanka</h3>
-                        <p class="text-primary-600">Secondary Level (grade 06 to 13)</p>
-                        <p class="text-gray-500 text-sm">2006 – 2019</p>
-                    </div>
-    
-                    <div class="mb-4">
-                        <p class="text-gray-700">G.C.E Advanced Level (Mathematics, Physics, Chemistry) - 3A | 209th in island | Z-Score of 2.4704
-G.C.E O/L 2016: 8 A, B Passes</p>
-                    </div>
-        
-                </div>
-    
+            </div>
+
+            <div class="education-item">
+                <h4>Primary Education</h4>
+                <h4>Kn/Tharmapuram G.T.M.S, Sri Lanka</h4>
+                <div class="date">January 2006 – December 2010</div>
             </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Skills & Expertise</h2>
+        <!-- Publications Section -->
+        <div class="section" id="publications">
+            <h2>Publications</h2>
             
-            <!-- Programming Languages -->
-            <div class="mb-10 animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-code text-primary-500 mr-2"></i>
-                    Programming Languages
-                </h3>
-                <div class="flex flex-wrap gap-3">
-
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Python</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">TypeScript</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">JavaScript</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">PHP</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Java</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">C++</span>
-    
-                </div>
+            <div class="publication-item">
+                <div class="publication-title">Incepto@DravidianLangTech 2025: Detecting Abusive Tamil and Malayalam Text Targeting Women on YouTube</div>
+                <div class="publication-venue">Association for Computational Linguistics • May 3, 2025</div>
+                <p>This study introduces a novel multilingual model designed to effectively address the challenges of detecting abusive content in low-resource, code-mixed languages. Our model achieved a macro F1 score of 0.7864 on Tamil dataset and 0.7058 on Malayalam dataset using transfer learning techniques and multi-head attention mechanisms.</p>
             </div>
-            
-            <!-- Technical Fields -->
-            <div class="mb-10 animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-laptop-code text-primary-500 mr-2"></i>
-                    Technical Fields
-                </h3>
-                <div class="flex flex-wrap gap-3">
 
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Full Stack Development</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">UX</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Quality Assurance</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Agentic Systems</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Machine Learning</span>
-    
-                </div>
-            </div>
-            
-            <!-- Frameworks -->
-            <div class="mb-10 animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-cubes text-primary-500 mr-2"></i>
-                    Frameworks
-                </h3>
-                <div class="flex flex-wrap gap-3">
-
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">FastAPI</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">React</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Node.js</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">React Native</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">PyTest</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Jest</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">TanStack Query</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Tailwind CSS</span>
-    
-                </div>
-            </div>
-            
-            <!-- Databases -->
-            <div class="mb-10 animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-database text-primary-500 mr-2"></i>
-                    Databases
-                </h3>
-                <div class="flex flex-wrap gap-3">
-
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">MySQL</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">PostgreSQL</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">MongoDB</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">ChromaDB</span>
-    
-                </div>
-            </div>
-            
-            <!-- Tools & Services -->
-            <div class="mb-10 animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-tools text-primary-500 mr-2"></i>
-                    Tools & Services
-                </h3>
-                <div class="flex flex-wrap gap-3">
-
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">AWS</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Git</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Docker</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">GitHub Actions (workflows)</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Keycloak</span>
-    
-                </div>
-            </div>
-            
-            <!-- Soft Skills -->
-            <div class="animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-users text-primary-500 mr-2"></i>
-                    Soft Skills
-                </h3>
-                <div class="flex flex-wrap gap-3">
-
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Teamwork</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Communication</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Time Management</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Leadership</span>
-    
-                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Adaptability</span>
-    
-                </div>
+            <div class="publication-item">
+                <div class="publication-title">EmoTa: A Tamil Emotional Speech Dataset</div>
+                <div class="publication-venue">International Committee on Computational Linguistics • January 19, 2025</div>
+                <p>This paper introduces EmoTa, the first emotional speech dataset in Tamil, designed to reflect the linguistic diversity of Sri Lankan Tamil speakers. EmoTa comprises 936 utterances from 22 native Tamil speakers across five primary emotions with substantial Fleiss' Kappa agreement score of 0.74 and F1-scores of 0.91 and 0.90.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Experience Timeline Section -->
-    <section id="experience" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-12 section-title">Professional Journey</h2>
+        <!-- Projects Section -->
+        <div class="section" id="projects">
+            <h2>Key Projects</h2>
             
-            <div class="timeline">
+            <div class="project-item">
+                <h4>DravidaKavacham – Abusive Content Detection for Tamil & Malayalam</h4>
+                <div class="date">December 2024</div>
+                <p>Developed an open-source tool for detecting abusive Tamil and Malayalam content targeting women. Built as part of DravidianLangTech @ NAACL 2025, leveraging NLP and machine learning for accurate text classification.</p>
+                <p><strong>Technologies:</strong> Python, Machine Learning, Transfer Learning, Attention Mechanisms</p>
+            </div>
 
-                <div class="timeline-container left">
-                    <div class="timeline-content bg-white rounded-xl p-6 shadow-md">
-                        <div class="flex flex-col md:items-start">
-                            <div class="mb-3">
-                                <h3 class="text-xl font-semibold text-gray-800">H2O.ai</h3>
-                                <p class="text-primary-600">Software Engineering Intern</p>
-                                <span class="inline-block mt-1 bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">November 2023 - Present</span>
-                            </div>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Responsibilities:</h4>
-                            <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                                <li>Contributed to Agentic Application and H2OGPTe, enhancing frontend UX/UI and backend functionality with React, Fluent UI, and FastAPI</li>
-        
-                                <li>Built the ChurnApp, integrating H2O Driverless AI, Salesforce, and helpdesk data to predict customer churn and enhance analytics</li>
-        
-                                <li>Designed and developed the Olympic App, a hackathon platform with H2O Wave and PSQL, streamlining participant and admin workflows</li>
-        
-                            </ul>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Technologies:</h4>
-                            <div class="flex flex-wrap gap-2">
-    
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">React</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Fluent UI</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">FastAPI</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">H2O Wave</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">PostgreSQL</span>
-        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="timeline-container right">
-                    <div class="timeline-content bg-white rounded-xl p-6 shadow-md">
-                        <div class="flex flex-col md:items-start">
-                            <div class="mb-3">
-                                <h3 class="text-xl font-semibold text-gray-800">Aaivu</h3>
-                                <p class="text-primary-600">Full-Stack Developer (Apprenticeship)</p>
-                                <span class="inline-block mt-1 bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">May 2024 - Present</span>
-                            </div>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Responsibilities:</h4>
-                            <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                                <li>Developed and enhanced Rtuthaya Website especially on Project and Conference pages</li>
-        
-                                <li>Focusing on key features using PHP, MySQL, HTML, CSS, and JavaScript</li>
-        
-                            </ul>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Technologies:</h4>
-                            <div class="flex flex-wrap gap-2">
-    
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">PHP</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">MySQL</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">HTML</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">CSS</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">JavaScript</span>
-        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="timeline-container left">
-                    <div class="timeline-content bg-white rounded-xl p-6 shadow-md">
-                        <div class="flex flex-col md:items-start">
-                            <div class="mb-3">
-                                <h3 class="text-xl font-semibold text-gray-800">Aaivu Colombo</h3>
-                                <p class="text-primary-600">Fullstack Developer (Volunteer)</p>
-                                <span class="inline-block mt-1 bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">January 2023 - December 2024</span>
-                            </div>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Responsibilities:</h4>
-                            <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-    
-                                <li>Contributed to Uthaya sir's personal website</li>
-        
-                                <li>Front-end page development</li>
-        
-                                <li>Established back-end connections</li>
-        
-                                <li>Integrated MySQL database</li>
-        
-                                <li>Implemented database triggers for data consistency</li>
-        
-                            </ul>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Technologies:</h4>
-                            <div class="flex flex-wrap gap-2">
-    
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">HTML</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">CSS</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">JavaScript</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">jQuery</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">Bootstrap</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">MySQL</span>
-        
-                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">PHP</span>
-        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
+            <div class="project-item">
+                <h4>QuickChat - Chrome Extension Help Chatbot</h4>
+                <div class="date">May 2024 – July 2024</div>
+                <p>Developed Chrome extension integrating help chatbot into any website's bottom right corner. Backend processes involve web scraping, content embedding with OpenAI embeddings and Chroma DB, with real-time responses using GPT-3.5.</p>
+                <p><strong>Technologies:</strong> JavaScript, HTML/CSS, Python, FastAPI, Web Scraping, OpenAI Embeddings, Chroma DB, Vector Databases, RAG</p>
+            </div>
+
+            <div class="project-item">
+                <h4>Driver's License Test Application</h4>
+                <div class="date">July 2023 – October 2023</div>
+                <p>Developed user-friendly web portal and mobile application for driver's license exam preparation with comprehensive study materials, practice tests, and performance feedback.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Express JS, MongoDB, React Native, Git, CI/CD, Docker, AWS EC2, Redux.js</p>
+            </div>
+
+            <div class="project-item">
+                <h4>Supply Chain Management System</h4>
+                <div class="date">September 2022 – January 2023</div>
+                <p>Developed web-based SCMS for online shopping with team of 5 members. Designed RDBMS for efficient data management and implemented triggers and functions for enhanced database performance.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, PHP, MySQL</p>
+            </div>
+
+            <div class="project-item">
+                <h4>Email Client</h4>
+                <div class="date">July 2022 – August 2022</div>
+                <p>Developed console-based Email Client application using Java programming, design patterns, and OOP concepts. Features include contact management, email sending, automated birthday wishes, and email history.</p>
+                <p><strong>Technologies:</strong> Java, Object-Oriented Programming, Design Patterns</p>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Projects</h2>
+        <!-- Skills Section -->
+        <div class="section" id="skills">
+            <h2>Technical Skills</h2>
             
-            <!-- Project Filters -->
-            <div class="mb-8">
-                <div class="flex flex-wrap gap-2 justify-center">
-                    <button class="filter-btn active bg-primary-600 text-white px-4 py-2 rounded-lg text-sm transition-all hover:bg-primary-700" data-filter="all">All Projects</button>
-                    <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm transition-all hover:bg-gray-300" data-filter="research">Research</button>
-                    <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm transition-all hover:bg-gray-300" data-filter="application">Applications</button>
-                    <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm transition-all hover:bg-gray-300" data-filter="academic">Academic</button>
-                </div>
-            </div>
-            
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Projects will be displayed here -->
-            </div>
-            
-            <!-- Pagination -->
-            <div class="mt-12 flex justify-center">
-                <div id="pagination" class="flex space-x-2">
-                    <!-- Pagination buttons will be generated here -->
-                </div>
+            <div class="skills-grid">
+                <p><strong>Programming Languages:</strong> Python, JavaScript, TypeScript, Java, C++, PHP, HTML/CSS</p>
+                <p><strong>Frameworks & Libraries:</strong> React, FastAPI, Express.js, Flask, Node.js, React Native, Bootstrap, jQuery, PyTorch, NumPy, Pandas</p>
+                <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Chroma DB, RDBMS</p>
+                <p><strong>Cloud & DevOps:</strong> AWS (EC2, S3, RDS), Docker, GitHub Actions, CI/CD, Nginx, Reverse Proxy</p>
+                <p><strong>AI/ML Technologies:</strong> Machine Learning, Deep Learning, PyTorch, Transfer Learning, NLP, Large Language Models, Generative AI, CNN, Attention Mechanisms</p>
+                <p><strong>Development Tools:</strong> Git, GitHub, REST APIs, OAuth 2.0, Unit Testing, Jest, Version Control, Web Scraping</p>
+                <p><strong>Specializations:</strong> Full-Stack Development, Speech Emotion Recognition, Natural Language Processing, Agentic Systems, UI/UX Design</p>
             </div>
         </div>
-    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // All projects data
-            const allProjects = [
-                {
-                    title: "Multilingual Universal SER Model",
-                    period: "Research Project | 2024 - Present",
-                    description: "A multilingual Speech Emotion Recognition (SER) initiative focused on developing a universal model capable of recognizing speech emotions across 15+ languages.",
-                    contributions: [
-                        "Created a Tamil Speech Emotion Recognition (SER) dataset focused on Sri Lankan Tamil dialects",
-                        "Surveyed existing SER models and datasets across multiple languages globally, focusing on Dravidian languages",
-                        "Training a universal model capable of handling speech emotions in 15+ languages with a proposed architecture"
-                    ],
-                    technologies: ["Python", "PyTorch", "Transformers", "CNN"],
-                    category: "research"
-                },
-                {
-                    title: "DravidaKavacham – Abusive Content Detection",
-                    period: "Research Project | Dec 2024",
-                    description: "An open-source tool for detecting abusive Tamil and Malayalam content, with a focus on harmful language targeting women.",
-                    contributions: [
-                        "Built as part of DravidianLangTech @ NAACL 2025",
-                        "Leveraged NLP and machine learning for accurate text classification and content analysis",
-                        "Focused on detecting and flagging harmful language targeting women in Dravidian languages"
-                    ],
-                    technologies: ["Python", "NLP", "Machine Learning", "Text Classification"],
-                    category: "research"
-                },
-                {
-                    title: "DBreeze",
-                    period: "Database Interaction Application | 2024",
-                    description: "A chatbot application enabling database interaction via Large Language Models (LLMs) for query generation and validation.",
-                    contributions: [
-                        "Developed a chatbot application enabling database interaction via Large Language Models (LLMs) for query generation and validation",
-                        "Implemented error handling and feedback loops for query syntax and read-only access validation",
-                        "Benchmarking methodologies for cost and evaluation metrics"
-                    ],
-                    technologies: ["Python", "React", "TypeScript", "TailwindCSS", "Keycloak", "FastAPI", "Docker", "PostgreSQL"],
-                    category: "application"
-                },
-                {
-                    title: "QuickChat - Chrome Extension",
-                    period: "Individual Project | May 2024 - July 2024",
-                    description: "A Chrome extension that adds a help chatbot to any website's bottom-right corner with real-time responses.",
-                    contributions: [
-                        "Developed a Chrome extension that adds a help chatbot to any website's bottom-right corner with real-time responses using GPT 3.5",
-                        "Implemented web scraping and Chroma DB for dynamic content handling (RAG), leveraging OpenAI embeddings for accurate chatbot responses"
-                    ],
-                    technologies: ["HTML", "CSS", "JavaScript", "RAG", "ChromaDB"],
-                    category: "application"
-                },
-                {
-                    title: "Drive Smart Application",
-                    period: "Group Project | July 2023 - October 2023",
-                    description: "An online learning platform to prepare individuals for the Sri Lankan driver's license test exam.",
-                    contributions: [
-                        "Developed mobile and web apps for Sri Lankan driver's license tests with React, React Native, and MongoDB",
-                        "Implemented OAuth 2.0, JWT, and CI/CD using GitHub Actions, Docker, and AWS"
-                    ],
-                    technologies: ["React", "React Native", "Docker", "CI/CD", "Github Actions", "MongoDB"],
-                    category: "application"
-                },
-                {
-                    title: "Supply Chain Management System",
-                    period: "Academic Project | Sep 2022 - Jan 2023",
-                    description: "A web-based Supply Chain Management System (SCMS) for online shopping, developed collaboratively with a team of 5 members.",
-                    contributions: [
-                        "Utilized HTML, CSS, and JavaScript with Bootstrap 5.0 for front-end development",
-                        "Employed PHP and MySQL for back-end development",
-                        "Designed the RDBMS for efficient data management and implemented triggers and functions"
-                    ],
-                    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "RDBMS"],
-                    category: "academic"
-                },
-                {
-                    title: "Email Client",
-                    period: "Academic Project | Jul 2022 - Aug 2022",
-                    description: "A console-based Email Client application developed as part of an academic module, utilizing Java programming language and OOP concepts.",
-                    contributions: [
-                        "Implemented contact management for storing and managing contact details including birthdays",
-                        "Created email sending capabilities directly from the console interface",
-                        "Developed automated birthday wishes functionality and email history tracking"
-                    ],
-                    technologies: ["Java", "OOP", "Design Patterns"],
-                    category: "academic"
-                }
-            ];
+        <!-- Awards Section -->
+        <div class="section" id="awards">
+            <h2>Honors & Awards</h2>
             
-            // Pagination variables
-            const projectsPerPage = 4;
-            let currentPage = 1;
-            let filteredProjects = [...allProjects];
-            
-            // Function to render projects
-            function renderProjects() {
-                const projectsContainer = document.getElementById('projects-container');
-                projectsContainer.innerHTML = '';
-                
-                // Calculate start and end indices for current page
-                const startIndex = (currentPage - 1) * projectsPerPage;
-                const endIndex = Math.min(startIndex + projectsPerPage, filteredProjects.length);
-                
-                // Get projects for current page
-                const currentProjects = filteredProjects.slice(startIndex, endIndex);
-                
-                // Render each project
-                currentProjects.forEach(project => {
-                    const projectCard = document.createElement('div');
-                    projectCard.className = 'bg-white rounded-xl overflow-hidden shadow-md project-card animate-on-scroll';
-                    projectCard.setAttribute('data-category', project.category);
-                    
-                    let technologiesHTML = '';
-                    project.technologies.forEach(tech => {
-                        technologiesHTML += `<span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">${tech}</span>`;
-                    });
-                    
-                    let contributionsHTML = '';
-                    project.contributions.forEach(contribution => {
-                        contributionsHTML += `<li>${contribution}</li>`;
-                    });
-                    
-                    projectCard.innerHTML = `
-                        <div class="bg-primary-600 text-white p-4">
-                            <h3 class="text-xl font-semibold">${project.title}</h3>
-                            <p class="text-primary-100 text-sm">${project.period}</p>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-gray-700 mb-4">${project.description}</p>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Key Contributions:</h4>
-                            <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
-                                ${contributionsHTML}
-                            </ul>
-                            
-                            <h4 class="text-md font-medium text-gray-800 mb-2">Technologies Used:</h4>
-                            <div class="flex flex-wrap gap-2">
-                                ${technologiesHTML}
-                            </div>
-                        </div>
-                    `;
-                    
-                    projectsContainer.appendChild(projectCard);
-                });
-                
-                // Initialize animation on scroll for newly added elements
-                const animateElements = document.querySelectorAll('.animate-on-scroll');
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('fade-in');
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                animateElements.forEach(element => {
-                    observer.observe(element);
-                });
-                
-                // Update pagination
-                renderPagination();
-            }
-            
-            // Function to render pagination
-            function renderPagination() {
-                const paginationContainer = document.getElementById('pagination');
-                paginationContainer.innerHTML = '';
-                
-                const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
-                
-                // Previous button
-                if (totalPages > 1) {
-                    const prevButton = document.createElement('button');
-                    prevButton.className = `px-3 py-1 rounded-md ${currentPage === 1 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
-                    prevButton.innerHTML = '&laquo;';
-                    prevButton.disabled = currentPage === 1;
-                    prevButton.addEventListener('click', () => {
-                        if (currentPage > 1) {
-                            currentPage--;
-                            renderProjects();
-                            window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, behavior: 'smooth' });
-                        }
-                    });
-                    paginationContainer.appendChild(prevButton);
-                }
-                
-                // Page numbers
-                for (let i = 1; i <= totalPages; i++) {
-                    const pageButton = document.createElement('button');
-                    pageButton.className = `px-3 py-1 rounded-md ${i === currentPage ? 'bg-primary-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
-                    pageButton.textContent = i;
-                    pageButton.addEventListener('click', () => {
-                        currentPage = i;
-                        renderProjects();
-                        window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, behavior: 'smooth' });
-                    });
-                    paginationContainer.appendChild(pageButton);
-                }
-                
-                // Next button
-                if (totalPages > 1) {
-                    const nextButton = document.createElement('button');
-                    nextButton.className = `px-3 py-1 rounded-md ${currentPage === totalPages ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
-                    nextButton.innerHTML = '&raquo;';
-                    nextButton.disabled = currentPage === totalPages;
-                    nextButton.addEventListener('click', () => {
-                        if (currentPage < totalPages) {
-                            currentPage++;
-                            renderProjects();
-                            window.scrollTo({ top: document.getElementById('projects').offsetTop - 100, behavior: 'smooth' });
-                        }
-                    });
-                    paginationContainer.appendChild(nextButton);
-                }
-            }
-            
-            // Filter projects
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Update active button
-                    filterBtns.forEach(b => {
-                        b.classList.remove('active', 'bg-primary-600', 'text-white');
-                        b.classList.add('bg-gray-200', 'text-gray-700');
-                    });
-                    
-                    this.classList.add('active', 'bg-primary-600', 'text-white');
-                    this.classList.remove('bg-gray-200', 'text-gray-700');
-                    
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Filter projects
-                    if (filter === 'all') {
-                        filteredProjects = [...allProjects];
-                    } else {
-                        filteredProjects = allProjects.filter(project => project.category === filter);
-                    }
-                    
-                    // Reset to first page when filter changes
-                    currentPage = 1;
-                    
-                    // Render projects with new filter
-                    renderProjects();
-                });
-            });
-            
-            // Initial render
-            renderProjects();
-        });
-    </script>
-    <!-- Achievements Section -->
-    <section id="achievements" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Achievements & Awards</h2>
-            
-            <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-trophy text-primary-500 mr-2"></i>
-                    Achievements & Awards
-                </h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <i class="fas fa-award text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">COLING 2025: Accepted research paper "EmoTa: A Tamil Emotional Speech Dataset" | Presented at the CHiPSAL Workshop</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-award text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">All Island Mathematics Competition 2018: Senior 2, 2nd Runner-Up | Represented the Northern Province Team</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-award text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Mahapola Scholarship to pursue undergraduate studies, awarded by the Government of Sri Lanka</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-award text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Ranked 209th in the island in GCE Advanced Level with Z-Score of 2.4704 and 3A grades</span>
-                    </li>
+            <div class="achievement-highlight">
+                <ul>
+                    <li><strong>All Island Mathematics Competition 2018:</strong> Senior 2, 2nd Runner-Up (Northern Province Team) - Ministry of Education, Sri Lanka</li>
+                    <li><strong>Academic Excellence:</strong> Island Rank 209 in G.C.E Advanced Level with Z-Score 2.4704</li>
+                    <li><strong>Research Publications:</strong> Accepted papers in COLING 2025 and NAACL 2025 workshops</li>
+                    <li><strong>Professional Recognition:</strong> Promoted from Intern to Software Engineer at H2O.ai</li>
                 </ul>
             </div>
         </div>
-    </section>
-    
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Certifications</h2>
+
+        <!-- Certifications Section -->
+        <div class="section" id="certifications">
+            <h2>Licenses & Certifications</h2>
             
-            <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">
-                    <i class="fas fa-certificate text-primary-500 mr-2"></i>
-                    Certifications
-                </h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Foundations of User Experience (UX) Design - Google (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Meta Frontend Development - Meta (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Introduction to Large Language Models (LLMs) Level 1 - H2O.ai <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Machine Learning A-Z - Udemy <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">HTML and CSS in depth - Meta (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Programming with JavaScript - Meta (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Version Control - Meta (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">React Basics - Meta (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">Advanced React - Meta (Coursera) <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
-                        <span class="text-gray-700">The Complete jQuery Course: From Beginner To Advanced! - Udemy <a href="#" class="text-primary-500 hover:text-primary-700 text-sm font-medium">Verify</a></span>
-                    </li>
-                </ul>
+            <div class="cert-item">
+                <h4>Fundamentals of Deep Learning - NVIDIA (March 2025)</h4>
+                <p><strong>Credential ID:</strong> 1tO0Ys3ITkGJkXM3sgBKrQ</p>
+                <p><strong>Skills:</strong> Deep Learning, Machine Learning, PyTorch, Neural Networks</p>
+            </div>
+
+            <div class="cert-item">
+                <h4>Large Language Models (LLMs) - Level 1 - H2O.ai (March 2024)</h4>
+                <p><strong>Skills:</strong> Large Language Models, Generative AI, Natural Language Processing</p>
+            </div>
+
+            <div class="cert-item">
+                <h4>Machine Learning A-Z - Udemy (March 2024)</h4>
+                <p><strong>Credential ID:</strong> 60b2314b-e9de-4b14-af89-b301ec16a5ed</p>
+                <p><strong>Skills:</strong> CNN, Deep Learning, Supervised/Unsupervised Learning, PyTorch, NLP</p>
+            </div>
+
+            <div class="cert-item">
+                <h4>Meta Frontend Development Specialization - Coursera (2023)</h4>
+                <p><strong>Comprehensive Program Including:</strong> Advanced React, React Basics, HTML and CSS in depth, Programming with JavaScript, UX Design Foundations, Version Control</p>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Get In Touch</h2>
+        <!-- Volunteering Section -->
+        <div class="section" id="volunteering">
+            <h2>Volunteering</h2>
             
-            <div class="bg-primary-50 rounded-xl p-8 shadow-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="animate-on-scroll">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
-                        <p class="text-gray-700 mb-6">Feel free to reach out to me for any questions, collaboration opportunities, or just to say hello!</p>
-                        
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-envelope text-primary-500 mt-1 mr-3 w-5"></i>
-                                <div>
-                                    <span class="text-gray-600 block">Email</span>
-                                    <a href="mailto:luxshan.20@cse.mrt.ac.lk" class="text-gray-800 hover:text-primary-600">luxshanlux2000@gmail.com</a>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-phone-alt text-primary-500 mt-1 mr-3 w-5"></i>
-                                <div>
-                                    <span class="text-gray-600 block">Phone</span>
-                                    <a href="tel:+94-773038402" class="text-gray-800 hover:text-primary-600">+94-773038402</a>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-primary-500 mt-1 mr-3 w-5"></i>
-                                <div>
-                                    <span class="text-gray-600 block">Location</span>
-                                    <span class="text-gray-800">Neththaliyaru, Visuvamadu, Mullaithivu, Sri Lanka</span>
-                                </div>
-                            </li>
-                        </ul>
-                        
-                        <div class="mt-8">
-                            <h4 class="text-lg font-medium text-gray-800 mb-3">Find me on</h4>
-                            <div class="flex justify-center space-x-4">
-                                <a href="https://linkedin.com/in/lux-thavarasa" target="_blank" class="bg-white h-10 w-10 flex items-center justify-center rounded-full text-gray-600 hover:text-primary-500 shadow-sm hover:shadow-md transition-all">
-                                    <i class="fab fa-linkedin-in text-xl"></i>
-                                </a>
-                                <a href="https://github.com/luxshan2000" target="_blank" class="bg-white h-10 w-10 flex items-center justify-center rounded-full text-gray-600 hover:text-primary-500 shadow-sm hover:shadow-md transition-all">
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                                <a href="https://scholar.google.com/citations?user=Do87138AAAAJ&hl=en" target="_blank" class="bg-white h-10 w-10 flex items-center justify-center rounded-full text-gray-600 hover:text-primary-500 shadow-sm hover:shadow-md transition-all">
-                                    <i class="fas fa-graduation-cap text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="animate-on-scroll">
-                        <form class="bg-white p-6 rounded-lg shadow-sm">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
-                            </div>
-                            <div class="mb-4">
-                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
-                            </div>
-                            <div class="mb-6">
-                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
+            <div class="work-item">
+                <h4>Reviewer - DravidianLangTech Workshop (NAACL 2025)</h4>
+                <div class="date">January 2025 (1 month)</div>
+                <p>Contributed as volunteer paper reviewer for the Fifth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages. Evaluated research submissions specializing in hate speech detection across text and speech data.</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section" id="contact">
+            <h2>Contact Me</h2>
+            
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> luxshan2327@gmail.com</p>
+                <p><strong>Mobile:</strong> +94-77-3038402</p>
+                <p><strong>Address:</strong> Visuvamadu East, Visuvamadu, Mullaitivu, Northern Province, Sri Lanka</p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lux-thavarasa" target="_blank" style="color: var(--link-color);">linkedin.com/in/lux-thavarasa</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/luxshan2000" target="_blank" style="color: var(--link-color);">github.com/luxshan2000</a></p>
+                <p><strong>Languages:</strong> Tamil (Native), English (Professional Working)</p>
+                
+                <div style="margin-top: 20px; padding: 15px; background-color: var(--emphasis-bg); border-radius: 5px;">
+                    <p><em style="color: var(--emphasis-color);">"Let's shape the future together! I'm eager to connect with like-minded individuals and work on projects that push the boundaries of technology."</em></p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary-600 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <span class="font-bold text-lg">Luxshan Thavarasa</span>
-                    <p class="text-primary-200 text-sm mt-1">Software Engineering Intern at H2O.ai</p>
-                </div>
-                <div>
-                    <p class="text-primary-200">&copy; 2025 Luxshan Thavarasa. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <footer>
+            Last update: August 3, 2025 | © 2025 Luxshan Thavarasa. All rights reserved.
+        </footer>
+    </div>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 64, // Adjust for header height
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-        
-        // Animation on scroll
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        
-        function checkScroll() {
-            animateElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('animated');
-                }
-            });
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeToggle = document.querySelector('.theme-toggle');
+            const currentTheme = html.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                themeToggle.innerHTML = '🌙 Dark Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light Mode';
+                localStorage.setItem('theme', 'dark');
+            }
         }
-        
-        // Initial check
-        checkScroll();
-        
-        // Listen for scroll events
-        window.addEventListener('scroll', checkScroll);
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '☀️ Light Mode';
+            } else {
+                themeToggle.innerHTML = '🌙 Dark Mode';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
-    
 </body>
 </html>

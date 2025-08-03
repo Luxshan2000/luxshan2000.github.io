@@ -1,0 +1,16 @@
+{
+  "name": "luxshan2000.github.io",
+  "version": "1.0.0",
+  "description": "## Overview This is a professional portfolio website that uses separate JSON files for different sections of content. This approach makes it easy to update specific parts of your portfolio without having to modify the HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2"
+  }
+}
