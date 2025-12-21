@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Luxshan Thavarasa - Software Engineer at H2O.ai | AI/ML Research | Speech Emotion Recognition | Full-Stack Developer | University of Moratuwa CSE Graduate">
-    <meta name="keywords" content="Luxshan Thavarasa, Software Engineer, H2O.ai, AI ML, Machine Learning, Speech Emotion Recognition, Full Stack Developer, React, Python, FastAPI, University of Moratuwa, Computer Science, Research, COLING, NAACL, Tamil NLP, Portfolio">
+    <meta name="description"
+        content="Luxshan Thavarasa - Software Engineer at H2O.ai | AI/ML Research | Speech Emotion Recognition | Full-Stack Developer | University of Moratuwa CSE Graduate">
+    <meta name="keywords"
+        content="Luxshan Thavarasa, Software Engineer, H2O.ai, AI ML, Machine Learning, Speech Emotion Recognition, Full Stack Developer, React, Python, FastAPI, University of Moratuwa, Computer Science, Research, COLING, NAACL, Tamil NLP, Portfolio">
     <meta name="author" content="Luxshan Thavarasa">
     <meta name="robots" content="index, follow">
     <meta name="language" content="en">
@@ -13,32 +16,40 @@
 
     <!-- Verification-->
     <meta name="google-site-verification" content="vJ_8_GXQXpYoFpEnwPu_CdkGLjqzwp9DWGHrlCsLHNI" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://luxshan2000.github.io/">
     <meta property="og:title" content="Luxshan Thavarasa - Software Engineer & AI Research Enthusiast">
-    <meta property="og:description" content="Software Engineer at H2O.ai specializing in AI/ML, Speech Emotion Recognition, and Full-Stack Development. Published researcher in COLING 2025 & NAACL 2025.">
+    <meta property="og:description"
+        content="Software Engineer at H2O.ai specializing in AI/ML, Speech Emotion Recognition, and Full-Stack Development. Published researcher in COLING 2025 & NAACL 2025.">
     <meta property="og:image" content="https://luxshan2000.github.io/assets/profile.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Luxshan Thavarasa Portfolio">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://luxshan2000.github.io/">
     <meta property="twitter:title" content="Luxshan Thavarasa - Software Engineer & AI Research Enthusiast">
-    <meta property="twitter:description" content="Software Engineer at H2O.ai specializing in AI/ML, Speech Emotion Recognition, and Full-Stack Development. Published researcher in COLING 2025 & NAACL 2025.">
+    <meta property="twitter:description"
+        content="Software Engineer at H2O.ai specializing in AI/ML, Speech Emotion Recognition, and Full-Stack Development. Published researcher in COLING 2025 & NAACL 2025.">
     <meta property="twitter:image" content="https://luxshan2000.github.io/assets/profile.jpg">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://luxshan2000.github.io/">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/webIcon.png" type="image/png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/webIcon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/webIcon.png">
-    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -72,349 +83,399 @@
         "telephone": "+94773038402"
     }
     </script>
-    
+
     <title>Luxshan Thavarasa - Software Engineer & AI Research Enthusiast | H2O.ai</title>
-    
+
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --header-bg: #f8f9fa;
-            --border-color: #e1e5e9;
-            --accent-color: #3498db;
-            --secondary-bg: #f8f9fa;
-            --card-bg: #ffffff;
-            --shadow: 0 2px 8px rgba(0,0,0,0.1);
-            --link-color: #3498db;
-            --emphasis-bg: #fff;
-            --emphasis-color: #666;
+            --primary-bg: #fafbfc;
+            --text-primary: #0d1117;
+            --text-secondary: #6e7681;
+            --accent-color: #0969da;
+            --border-color: #e8ecef;
+            --link-color: #0969da;
+            --emphasis-bg: #f6f8fa;
+            --emphasis-color: #57606a;
+            --timeline-color: #d0d7de;
         }
 
         [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #e4e4e4;
-            --header-bg: #2d2d2d;
-            --border-color: #404040;
-            --accent-color: #64b5f6;
-            --secondary-bg: #2d2d2d;
-            --card-bg: #252525;
-            --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            --link-color: #81c784;
-            --emphasis-bg: #333333;
-            --emphasis-color: #b8b8b8;
+            --primary-bg: #0d1117;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-color: #58a6ff;
+            --border-color: #21262d;
+            --link-color: #58a6ff;
+            --emphasis-bg: #161b22;
+            --emphasis-color: #8b949e;
+            --timeline-color: #30363d;
         }
 
         * {
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         body {
-            font-family: Georgia, 'Times New Roman', serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            padding: 0;
+            background: var(--primary-bg);
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(9, 105, 218, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(9, 105, 218, 0.03) 0%, transparent 50%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
-        
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            position: relative;
+            padding: 80px 40px;
         }
 
         .theme-toggle {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 30px;
+            right: 30px;
             z-index: 1000;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 25px;
+            background: var(--emphasis-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            border-radius: 24px;
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
-            box-shadow: var(--shadow);
             display: flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
         .theme-toggle:hover {
-            opacity: 0.9;
+            background-color: var(--border-color);
         }
-        
+
+        /* Header */
         .header {
             display: flex;
-            margin-bottom: 30px;
             align-items: flex-start;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 20px;
+            margin-bottom: 80px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid var(--border-color);
         }
-        
+
         .profile-img {
-            width: 160px;
-            height: 200px;
-            margin-right: 30px;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            margin-right: 50px;
             flex-shrink: 0;
-            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            border: 3px solid var(--border-color);
         }
-        
+
         .header-info h1 {
-            font-size: 28px;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-            color: var(--text-color);
+            font-size: 48px;
+            margin: 0 0 12px 0;
+            font-weight: 900;
+            color: var(--text-primary);
+            letter-spacing: -0.04em;
+            line-height: 1;
         }
-        
+
         .motto {
+            font-size: 17px;
+            margin: 0 0 24px 0;
+            color: var(--text-secondary);
             font-style: italic;
-            color: var(--accent-color);
-            margin: 10px 0;
-            font-size: 14px;
+            font-weight: 400;
         }
-        
+
         .header-info p {
-            margin: 8px 0;
+            margin: 6px 0;
             font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
-        
+
         .header-info strong {
             font-weight: 600;
-            color: var(--text-color);
+            color: var(--text-primary);
         }
-        
+
         .contact-links {
-            margin: 15px 0;
+            margin-top: 28px;
             font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
         }
-        
+
         .contact-links a {
             color: var(--accent-color);
             text-decoration: none;
-            margin-right: 12px;
+            font-weight: 500;
+            transition: opacity 0.2s;
         }
-        
+
         .contact-links a:hover {
-            text-decoration: underline;
+            opacity: 0.7;
         }
-        
-        hr {
-            border: none;
-            border-top: 1px solid var(--border-color);
-            margin: 30px 0;
-        }
-        
+
+        /* Navigation */
         .nav-links {
-            font-size: 13px;
-            margin-bottom: 20px;
-            padding: 10px 0;
-            background: var(--secondary-bg);
-            border-radius: 5px;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 70px;
+            padding: 0;
         }
-        
+
         .nav-links a {
-            color: var(--accent-color);
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 15px;
             font-weight: 500;
+            transition: color 0.2s;
         }
-        
+
         .nav-links a:hover {
-            text-decoration: underline;
+            color: var(--text-primary);
         }
-        
+
+        /* Section Headings - Improved hierarchy */
         h2 {
-            font-size: 20px;
-            margin: 35px 0 15px 0;
-            font-weight: bold;
-            color: var(--text-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 5px;
+            font-size: 28px;
+            margin: 60px 0 40px 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
         }
-        
+
         h3 {
-            font-size: 17px;
-            margin: 25px 0 10px 0;
-            font-weight: bold;
-            color: var(--text-color);
+            font-size: 22px;
+            margin: 40px 0 24px 0;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
         }
-        
+
         h4 {
-            font-size: 15px;
-            margin: 18px 0 8px 0;
-            font-weight: bold;
-            color: var(--text-color);
+            font-size: 19px;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.4;
         }
-        
+
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 80px;
         }
-        
-        .work-item, .education-item, .project-item, .cert-item {
-            margin-bottom: 25px;
-            padding: 15px;
-            background: var(--secondary-bg);
-            border-left: 4px solid var(--accent-color);
-            border-radius: 3px;
+
+        /* Timeline for Experience/Education */
+        .timeline-container {
+            position: relative;
+            padding-left: 30px;
         }
-        
-        .date {
-            font-style: italic;
-            color: var(--accent-color);
-            font-size: 13px;
-            font-weight: 500;
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--timeline-color);
         }
-        
-        .company-link {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: 500;
+
+        .work-item,
+        .education-item {
+            position: relative;
+            margin-bottom: 48px;
+            padding: 0;
+            background: transparent;
         }
-        
-        .company-link:hover {
-            text-decoration: underline;
+
+        .timeline-container .work-item::before,
+        .timeline-container .education-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 2px solid var(--primary-bg);
+            box-shadow: 0 0 0 2px var(--accent-color);
         }
-        
-        ul {
-            margin: 12px 0;
-            padding-left: 25px;
-        }
-        
-        li {
-            margin: 8px 0;
-            font-size: 14px;
-            text-align: justify;
-        }
-        
-        .skills-grid {
-            margin: 15px 0;
-            background: var(--secondary-bg);
-            padding: 15px;
-            border-radius: 5px;
-        }
-        
-        .skills-grid p {
-            margin: 8px 0;
-            font-size: 14px;
-        }
-        
+
+        .project-item,
+        .cert-item,
         .publication-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--secondary-bg);
-            border-left: 4px solid #e74c3c;
-            border-radius: 3px;
+            margin-bottom: 48px;
+            padding: 0;
+            background: transparent;
         }
-        
-        .publication-title {
-            font-weight: bold;
-            color: #c0392b;
-            font-size: 15px;
-        }
-        
-        .publication-venue {
-            font-style: italic;
-            color: var(--accent-color);
+
+        .date {
             font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        
-        .contact-form {
-            margin-top: 30px;
-            padding: 25px;
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+
+        .company-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
         }
-        
-        .contact-form h3 {
-            margin-top: 0;
-            color: var(--text-color);
+
+        .company-link:hover {
+            opacity: 0.7;
         }
-        
-        .contact-form p {
+
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
             margin: 12px 0;
-            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
-        
-        .summary-box {
-            background: var(--secondary-bg);
+
+        p {
+            color: var(--text-secondary);
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        /* Skills Grid - Prominent Display */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .skill-category {
+            background: var(--emphasis-bg);
             padding: 20px;
             border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid var(--accent-color);
+            border: 1px solid var(--border-color);
         }
-        
+
+        .skill-category strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .skill-category span {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Publication styling */
+        .publication-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .publication-venue {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .contact-form {
+            background: transparent;
+            padding: 0;
+        }
+
+        .contact-form h3 {
+            margin-top: 0;
+            color: var(--text-primary);
+        }
+
+        .summary-box,
         .achievement-highlight {
-            background: var(--secondary-bg);
-            padding: 10px;
-            border-radius: 5px;
-            border-left: 4px solid #27ae60;
-            margin: 10px 0;
+            background: transparent;
+            padding: 0;
+            margin: 24px 0;
         }
-        
+
         footer {
-            margin-top: 50px;
+            margin-top: 100px;
             text-align: center;
-            font-size: 12px;
-            color: var(--text-color);
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 40px 0 20px;
             border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-            opacity: 0.8;
         }
-        
+
+        @media (max-width: 968px) {
+            .container {
+                max-width: 800px;
+                padding: 60px 30px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
-                padding: 20px;
             }
-            
+
             .profile-img {
                 margin-right: 0;
-                margin-bottom: 25px;
-                align-self: center;
-                width: 150px;
-                height: 180px;
+                margin-bottom: 30px;
             }
-            
+
+            .contact-links,
             .nav-links {
-                font-size: 13px;
-                padding: 15px;
+                justify-content: center;
             }
-            
-            .nav-links a {
-                display: inline-block;
-                margin: 5px;
-                padding: 8px 12px;
-            }
-            
-            .theme-toggle {
-                position: fixed !important;
-                top: 15px !important;
-                right: 15px !important;
-                z-index: 1001 !important;
-                font-size: 12px;
-                padding: 8px 12px;
-            }
-            
-            .container {
-                padding: 10px;
-                padding-top: 60px;
-            }
-            
+
             h1 {
-                font-size: 28px !important;
+                font-size: 36px !important;
             }
-            
-            .work-item, .education-item, .project-item, .cert-item {
-                padding: 20px;
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .timeline-container {
+                padding-left: 20px;
+            }
+
+            .timeline-container .work-item::before,
+            .timeline-container .education-item::before {
+                left: -25px;
             }
         }
     </style>
 </head>
+
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">
         🌙 Dark Mode
@@ -426,14 +487,14 @@
             <div class="header-info">
                 <h1>Luxshan Thavarasa</h1>
                 <div class="motto">"Seeing the unseen, shaping the future."</div>
-                <p><strong>Software Engineer</strong> @ <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a> | Research Enthusiast | CSE @ University of Moratuwa</p>
+                <p><strong>Software Engineer</strong> @ <a href="https://h2o.ai" target="_blank"
+                        class="company-link">H2O.ai</a> | Research Enthusiast | CSE @ University of Moratuwa</p>
                 <p><strong>Location:</strong> Visuvamadu East, Visuvamadu, Mullaitivu, Northern Province, Sri Lanka</p>
                 <p><strong>Email:</strong> luxshan2327 [AT] gmail.com</p>
                 <div class="contact-links">
-                    <strong>Connect:</strong>
-                    <a href="mailto:luxshan2327@gmail.com">Email</a> |
-                    <a href="https://linkedin.com/in/lux-thavarasa" target="_blank">LinkedIn</a> |
-                    <a href="https://github.com/luxshan2000" target="_blank">GitHub</a> |
+                    <a href="mailto:luxshan2327@gmail.com">Email</a>
+                    <a href="https://linkedin.com/in/lux-thavarasa" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/luxshan2000" target="_blank">GitHub</a>
                     <a href="tel:+94773038402">Mobile: 077-3038402</a>
                 </div>
             </div>
@@ -441,169 +502,262 @@
 
         <!-- Navigation -->
         <nav class="nav-links">
-            <a href="#about">About</a> / <a href="#experience">Experience</a> / <a href="#education">Education</a> / <a href="#projects">Projects</a> / <a href="#publications">Publications</a> / <a href="#skills">Skills</a> / <a href="#certifications">Certifications</a> / <a href="#awards">Awards</a> / <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#awards">Awards</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <!-- About Section -->
         <section class="section" id="about">
             <h2>About</h2>
             <div class="summary-box">
-                <p>Final-year Computer Science and Engineering student at the <a href="https://uom.lk" target="_blank" class="company-link">University of Moratuwa</a> with a passion for Full Stack Development and Artificial Intelligence. My research focuses on Speech Emotion Recognition (SER) for low-resource languages, aiming to bring AI advancements to diverse linguistic communities.</p>
-                
-                <p>I enjoy working in collaborative environments and thrive on creating innovative solutions that make complex data accessible and meaningful to users. I'm eager to connect with like-minded individuals and work on projects that push the boundaries of technology.</p>
+                <p>Final-year Computer Science and Engineering student at the <a href="https://uom.lk" target="_blank"
+                        class="company-link">University of Moratuwa</a> with a passion for Full Stack Development and
+                    Artificial Intelligence. My research focuses on Speech Emotion Recognition (SER) for low-resource
+                    languages, aiming to bring AI advancements to diverse linguistic communities.</p>
+
+                <p>I enjoy working in collaborative environments and thrive on creating innovative solutions that make
+                    complex data accessible and meaningful to users. I'm eager to connect with like-minded individuals
+                    and work on projects that push the boundaries of technology.</p>
             </div>
-            
-            <p><strong>Research Focus:</strong> Speech Emotion Recognition · Natural Language Processing · Agentic AI Systems · Full-Stack Development</p>
-            
+
+            <p><strong>Research Focus:</strong> Speech Emotion Recognition · Natural Language Processing · Agentic AI
+                Systems · Full-Stack Development</p>
+
             <p><strong>Languages:</strong> Tamil (Native), English (Professional Working)</p>
-            
-            <p><strong>Current Role:</strong> Software Engineer at <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a>, developing frontend and backend solutions for H2OGPTe and Agentic Applications.</p>
+
+            <p><strong>Current Role:</strong> Software Engineer at <a href="https://h2o.ai" target="_blank"
+                    class="company-link">H2O.ai</a>, developing frontend and backend solutions for H2OGPTe and Agentic
+                Applications.</p>
         </section>
 
-        <!-- Experience Section -->
-        <section class="section" id="experience">
-            <h2>Experience</h2>
-            
-            <h3>Professional</h3>
-            
-            <div class="work-item">
-                <h4>Software Engineer, <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a> (Colombo, Sri Lanka)</h4>
-                <div class="date">July 2025 – Present (2 months)</div>
-                <p><strong>H2OGPTe:</strong> Developing the frontend with a strong focus on UI/UX for agent interactions, while contributing to backend improvements to ensure seamless functionality.</p>
-            </div>
+        <!-- Technical Skills (Moved from bottom) -->
+        <section class="section" id="skills">
+            <h2>Technical Skills</h2>
 
-            <div class="work-item">
-                <h4>Intern Engineering - Software, <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a> (Colombo, Sri Lanka)</h4>
-                <div class="date">November 2023 – July 2025 (1 year 9 months)</div>
-                <ul>
-                    <li><strong>H2OGPTe:</strong> Developed frontend with focus on UI/UX for agent interactions while contributing to backend enhancements for seamless functionality</li>
-                    <li><strong>Agentic Application:</strong> Worked on both frontend and backend development using React with Fluent UI and H2O UI tools for frontend, and FastAPI with PostgreSQL for backend</li>
-                    <li><strong>ChurnApp:</strong> Created application to predict customer churn for H2O.ai. Trained model with H2O Driverless AI and deployed in MLOps environment. Integrated Salesforce and helpdesk data with React frontend and FastAPI backend</li>
-                    <li><strong>Olympic App:</strong> Developed platform for conducting hackathons, including participant and administrative applications using H2O Wave and PostgreSQL</li>
-                </ul>
-            </div>
-
-            <div class="work-item">
-                <h4>Full-stack Developer, <a href="https://aaivu.org" target="_blank" class="company-link">aaivu</a> (Colombo, Sri Lanka)</h4>
-                <div class="date">January 2023 – June 2025 (2 years 6 months)</div>
-                <p><strong>Rtuthaya Website:</strong> Contributed to the development of Dr. Uthayasankar Thayasivam's website. Managed content creators and guided new juniors in enhancing the application. Key contributions included project page and conference page development using PHP, MySQL, HTML, CSS, JavaScript, and Bootstrap.</p>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="section" id="education">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <h4>BSc Eng Hons, Computer Science & Engineering</h4>
-                <h4><a href="https://uom.lk" target="_blank" class="company-link">University of Moratuwa</a>, Sri Lanka</h4>
-                <div class="date">March 2021 – May 2025</div>
-                <ul>
-                    <li><strong>Specialization:</strong> Computer Science and Engineering</li>
-                    <li><strong>Key Skills Developed:</strong> Project Documentation, Computer Science, MySQL, Flask, NumPy, Software Development, Problem Solving, Software Architecture, Python, Data Structures, Java, Web Services, Mathematics, Solution Architecture, Software Quality, Technical Documentation, Analytical Skills, Leadership, Test Cases, API Development, SQL, RDBMS, Pandas, Communication, Test Planning, Scripting, Architecture Development, Generative AI, C++, Unit Testing</li>
-                    <li><strong>Final Year Project:</strong> Multilingual Universal Speech Emotion Recognition Model</li>
-                </ul>
-            </div>
-
-            <div class="education-item">
-                <h4>Secondary Education</h4>
-                <h4>Mu/Visuvamadu Maha Vidyalayam, Mullaitivu, Sri Lanka</h4>
-                <div class="date">January 2011 – August 2019</div>
-                <div class="achievement-highlight">
-                    <p><strong>G.C.E. (A/L) Examination 2019:</strong> 3A grades | Physical Science stream | Island Rank: 209 | Z-Score: 2.4704</p>
-                    <p><strong>G.C.E. (O/L) Examination 2016:</strong> 8A, 1B | Including Mathematics, Science, English, and Business & Accounts</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Programming Languages</strong>
+                    <span>Python, JavaScript, TypeScript, Java, C++, PHP, HTML/CSS</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Frameworks & Libraries</strong>
+                    <span>React, FastAPI, Express.js, Flask, Node.js, React Native, Bootstrap, jQuery, PyTorch, NumPy,
+                        Pandas</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Databases</strong>
+                    <span>MySQL, PostgreSQL, MongoDB, Chroma DB, RDBMS</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Cloud & DevOps</strong>
+                    <span>AWS (EC2, S3, RDS), Docker, GitHub Actions, CI/CD, Nginx, Reverse Proxy</span>
+                </div>
+                <div class="skill-category">
+                    <strong>AI/ML Technologies</strong>
+                    <span>Machine Learning, Deep Learning, PyTorch, Transfer Learning, NLP, Large Language Models,
+                        Generative AI, CNN, Attention Mechanisms</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Development Tools</strong>
+                    <span>Git, GitHub, REST APIs, OAuth 2.0, Unit Testing, Jest, Version Control, Web Scraping</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Specializations</strong>
+                    <span>Full-Stack Development, Speech Emotion Recognition, Natural Language Processing, Agentic
+                        Systems, UI/UX Design</span>
                 </div>
             </div>
+        </section>
 
-            <div class="education-item">
-                <h4>Primary Education</h4>
-                <h4>Kn/Tharmapuram G.T.M.S, Sri Lanka</h4>
-                <div class="date">January 2006 – December 2010</div>
+        <!-- Experience Section with Timeline -->
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+
+            <h3>Professional</h3>
+
+            <div class="timeline-container">
+                <div class="work-item">
+                    <h4>Software Engineer, <a href="https://h2o.ai" target="_blank" class="company-link">H2O.ai</a>
+                        (Colombo, Sri Lanka)</h4>
+                    <div class="date">July 2025 – Present (2 months)</div>
+                    <p><strong>H2OGPTe:</strong> Developing the frontend with a strong focus on UI/UX for agent
+                        interactions, while contributing to backend improvements to ensure seamless functionality.</p>
+                </div>
+
+                <div class="work-item">
+                    <h4>Intern Engineering - Software, <a href="https://h2o.ai" target="_blank"
+                            class="company-link">H2O.ai</a> (Colombo, Sri Lanka)</h4>
+                    <div class="date">November 2023 – July 2025 (1 year 9 months)</div>
+                    <ul>
+                        <li><strong>H2OGPTe:</strong> Developed frontend with focus on UI/UX for agent interactions
+                            while
+                            contributing to backend enhancements for seamless functionality</li>
+                        <li><strong>Agentic Application:</strong> Worked on both frontend and backend development using
+                            React with Fluent UI and H2O UI tools for frontend, and FastAPI with PostgreSQL for backend
+                        </li>
+                        <li><strong>ChurnApp:</strong> Created application to predict customer churn for H2O.ai. Trained
+                            model with H2O Driverless AI and deployed in MLOps environment. Integrated Salesforce and
+                            helpdesk data with React frontend and FastAPI backend</li>
+                        <li><strong>Olympic App:</strong> Developed platform for conducting hackathons, including
+                            participant and administrative applications using H2O Wave and PostgreSQL</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <h4>Full-stack Developer, <a href="https://aaivu.org" target="_blank" class="company-link">aaivu</a>
+                        (Colombo, Sri Lanka)</h4>
+                    <div class="date">January 2023 – June 2025 (2 years 6 months)</div>
+                    <p><strong>Rtuthaya Website:</strong> Contributed to the development of Dr. Uthayasankar
+                        Thayasivam's
+                        website. Managed content creators and guided new juniors in enhancing the application. Key
+                        contributions included project page and conference page development using PHP, MySQL, HTML, CSS,
+                        JavaScript, and Bootstrap.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section with Timeline -->
+        <section class="section" id="education">
+            <h2>Education</h2>
+
+            <div class="timeline-container">
+                <div class="education-item">
+                    <h4>BSc Eng Hons, Computer Science & Engineering</h4>
+                    <h4><a href="https://uom.lk" target="_blank" class="company-link">University of Moratuwa</a>, Sri
+                        Lanka</h4>
+                    <div class="date">March 2021 – May 2025</div>
+                    <ul>
+                        <li><strong>Specialization:</strong> Computer Science and Engineering</li>
+                        <li><strong>Key Skills Developed:</strong> Project Documentation, Computer Science, MySQL,
+                            Flask,
+                            NumPy, Software Development, Problem Solving, Software Architecture, Python, Data
+                            Structures,
+                            Java, Web Services, Mathematics, Solution Architecture, Software Quality, Technical
+                            Documentation, Analytical Skills, Leadership, Test Cases, API Development, SQL, RDBMS,
+                            Pandas,
+                            Communication, Test Planning, Scripting, Architecture Development, Generative AI, C++, Unit
+                            Testing</li>
+                        <li><strong>Final Year Project:</strong> Multilingual Universal Speech Emotion Recognition Model
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <h4>Secondary Education</h4>
+                    <h4>Mu/Visuvamadu Maha Vidyalayam, Mullaitivu, Sri Lanka</h4>
+                    <div class="date">January 2011 – August 2019</div>
+                    <div class="achievement-highlight">
+                        <p><strong>G.C.E. (A/L) Examination 2019:</strong> 3A grades | Physical Science stream | Island
+                            Rank: 209 | Z-Score: 2.4704</p>
+                        <p><strong>G.C.E. (O/L) Examination 2016:</strong> 8A, 1B | Including Mathematics, Science,
+                            English,
+                            and Business & Accounts</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <h4>Primary Education</h4>
+                    <h4>Kn/Tharmapuram G.T.M.S, Sri Lanka</h4>
+                    <div class="date">January 2006 – December 2010</div>
+                </div>
             </div>
         </section>
 
         <!-- Publications Section -->
         <section class="section" id="publications">
             <h2>Publications</h2>
-            
+
             <div class="publication-item">
-                <div class="publication-title">Incepto@DravidianLangTech 2025: Detecting Abusive Tamil and Malayalam Text Targeting Women on YouTube</div>
+                <div class="publication-title">Incepto@DravidianLangTech 2025: Detecting Abusive Tamil and Malayalam
+                    Text Targeting Women on YouTube</div>
                 <div class="publication-venue">Association for Computational Linguistics • May 3, 2025</div>
-                <p>This study introduces a novel multilingual model designed to effectively address the challenges of detecting abusive content in low-resource, code-mixed languages. Our model achieved a macro F1 score of 0.7864 on Tamil dataset and 0.7058 on Malayalam dataset using transfer learning techniques and multi-head attention mechanisms.</p>
+                <p>This study introduces a novel multilingual model designed to effectively address the challenges of
+                    detecting abusive content in low-resource, code-mixed languages. Our model achieved a macro F1 score
+                    of 0.7864 on Tamil dataset and 0.7058 on Malayalam dataset using transfer learning techniques and
+                    multi-head attention mechanisms.</p>
             </div>
 
             <div class="publication-item">
                 <div class="publication-title">EmoTa: A Tamil Emotional Speech Dataset</div>
-                <div class="publication-venue">International Committee on Computational Linguistics • January 19, 2025</div>
-                <p>This paper introduces EmoTa, the first emotional speech dataset in Tamil, designed to reflect the linguistic diversity of Sri Lankan Tamil speakers. EmoTa comprises 936 utterances from 22 native Tamil speakers across five primary emotions with substantial Fleiss' Kappa agreement score of 0.74 and F1-scores of 0.91 and 0.90.</p>
+                <div class="publication-venue">International Committee on Computational Linguistics • January 19, 2025
+                </div>
+                <p>This paper introduces EmoTa, the first emotional speech dataset in Tamil, designed to reflect the
+                    linguistic diversity of Sri Lankan Tamil speakers. EmoTa comprises 936 utterances from 22 native
+                    Tamil speakers across five primary emotions with substantial Fleiss' Kappa agreement score of 0.74
+                    and F1-scores of 0.91 and 0.90.</p>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section class="section" id="projects">
             <h2>Key Projects</h2>
-            
+
             <div class="project-item">
                 <h4>DravidaKavacham – Abusive Content Detection for Tamil & Malayalam</h4>
                 <div class="date">December 2024</div>
-                <p>Developed an open-source tool for detecting abusive Tamil and Malayalam content targeting women. Built as part of DravidianLangTech @ NAACL 2025, leveraging NLP and machine learning for accurate text classification.</p>
+                <p>Developed an open-source tool for detecting abusive Tamil and Malayalam content targeting women.
+                    Built as part of DravidianLangTech @ NAACL 2025, leveraging NLP and machine learning for accurate
+                    text classification.</p>
                 <p><strong>Technologies:</strong> Python, Machine Learning, Transfer Learning, Attention Mechanisms</p>
             </div>
 
             <div class="project-item">
                 <h4>QuickChat - Chrome Extension Help Chatbot</h4>
                 <div class="date">May 2024 – July 2024</div>
-                <p>Developed Chrome extension integrating help chatbot into any website's bottom right corner. Backend processes involve web scraping, content embedding with OpenAI embeddings and Chroma DB, with real-time responses using GPT-3.5.</p>
-                <p><strong>Technologies:</strong> JavaScript, HTML/CSS, Python, FastAPI, Web Scraping, OpenAI Embeddings, Chroma DB, Vector Databases, RAG</p>
+                <p>Developed Chrome extension integrating help chatbot into any website's bottom right corner. Backend
+                    processes involve web scraping, content embedding with OpenAI embeddings and Chroma DB, with
+                    real-time responses using GPT-3.5.</p>
+                <p><strong>Technologies:</strong> JavaScript, HTML/CSS, Python, FastAPI, Web Scraping, OpenAI
+                    Embeddings, Chroma DB, Vector Databases, RAG</p>
             </div>
 
             <div class="project-item">
                 <h4>Driver's License Test Application</h4>
                 <div class="date">July 2023 – October 2023</div>
-                <p>Developed user-friendly web portal and mobile application for driver's license exam preparation with comprehensive study materials, practice tests, and performance feedback.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Express JS, MongoDB, React Native, Git, CI/CD, Docker, AWS EC2, Redux.js</p>
+                <p>Developed user-friendly web portal and mobile application for driver's license exam preparation with
+                    comprehensive study materials, practice tests, and performance feedback.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Express JS, MongoDB, React
+                    Native, Git, CI/CD, Docker, AWS EC2, Redux.js</p>
             </div>
 
             <div class="project-item">
                 <h4>Supply Chain Management System</h4>
                 <div class="date">September 2022 – January 2023</div>
-                <p>Developed web-based SCMS for online shopping with team of 5 members. Designed RDBMS for efficient data management and implemented triggers and functions for enhanced database performance.</p>
+                <p>Developed web-based SCMS for online shopping with team of 5 members. Designed RDBMS for efficient
+                    data management and implemented triggers and functions for enhanced database performance.</p>
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, PHP, MySQL</p>
             </div>
 
             <div class="project-item">
                 <h4>Email Client</h4>
                 <div class="date">July 2022 – August 2022</div>
-                <p>Developed console-based Email Client application using Java programming, design patterns, and OOP concepts. Features include contact management, email sending, automated birthday wishes, and email history.</p>
+                <p>Developed console-based Email Client application using Java programming, design patterns, and OOP
+                    concepts. Features include contact management, email sending, automated birthday wishes, and email
+                    history.</p>
                 <p><strong>Technologies:</strong> Java, Object-Oriented Programming, Design Patterns</p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section" id="skills">
-            <h2>Technical Skills</h2>
-            
-            <div class="skills-grid">
-                <p><strong>Programming Languages:</strong> Python, JavaScript, TypeScript, Java, C++, PHP, HTML/CSS</p>
-                <p><strong>Frameworks & Libraries:</strong> React, FastAPI, Express.js, Flask, Node.js, React Native, Bootstrap, jQuery, PyTorch, NumPy, Pandas</p>
-                <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Chroma DB, RDBMS</p>
-                <p><strong>Cloud & DevOps:</strong> AWS (EC2, S3, RDS), Docker, GitHub Actions, CI/CD, Nginx, Reverse Proxy</p>
-                <p><strong>AI/ML Technologies:</strong> Machine Learning, Deep Learning, PyTorch, Transfer Learning, NLP, Large Language Models, Generative AI, CNN, Attention Mechanisms</p>
-                <p><strong>Development Tools:</strong> Git, GitHub, REST APIs, OAuth 2.0, Unit Testing, Jest, Version Control, Web Scraping</p>
-                <p><strong>Specializations:</strong> Full-Stack Development, Speech Emotion Recognition, Natural Language Processing, Agentic Systems, UI/UX Design</p>
             </div>
         </section>
 
         <!-- Awards Section -->
         <section class="section" id="awards">
             <h2>Honors & Awards</h2>
-            
+
             <div class="achievement-highlight">
                 <ul>
-                    <li><strong>All Island Mathematics Competition 2018:</strong> Senior 2, 2nd Runner-Up (Northern Province Team) - Ministry of Education, Sri Lanka</li>
-                    <li><strong>Academic Excellence:</strong> Island Rank 209 in G.C.E Advanced Level with Z-Score 2.4704</li>
-                    <li><strong>Research Publications:</strong> Accepted papers in COLING 2025 and NAACL 2025 workshops</li>
-                    <li><strong>Professional Recognition:</strong> Promoted from Intern to Software Engineer at H2O.ai</li>
+                    <li><strong>All Island Mathematics Competition 2018:</strong> Senior 2, 2nd Runner-Up (Northern
+                        Province Team) - Ministry of Education, Sri Lanka</li>
+                    <li><strong>Academic Excellence:</strong> Island Rank 209 in G.C.E Advanced Level with Z-Score
+                        2.4704</li>
+                    <li><strong>Research Publications:</strong> Accepted papers in COLING 2025 and NAACL 2025 workshops
+                    </li>
+                    <li><strong>Professional Recognition:</strong> Promoted from Intern to Software Engineer at H2O.ai
+                    </li>
                 </ul>
             </div>
         </section>
@@ -611,7 +765,7 @@
         <!-- Certifications Section -->
         <section class="section" id="certifications">
             <h2>Licenses & Certifications</h2>
-            
+
             <div class="cert-item">
                 <h4>Fundamentals of Deep Learning - NVIDIA (March 2025)</h4>
                 <p><strong>Credential ID:</strong> 1tO0Ys3ITkGJkXM3sgBKrQ</p>
@@ -631,36 +785,43 @@
 
             <div class="cert-item">
                 <h4>Meta Frontend Development Specialization - Coursera (2023)</h4>
-                <p><strong>Comprehensive Program Including:</strong> Advanced React, React Basics, HTML and CSS in depth, Programming with JavaScript, UX Design Foundations, Version Control</p>
+                <p><strong>Comprehensive Program Including:</strong> Advanced React, React Basics, HTML and CSS in
+                    depth, Programming with JavaScript, UX Design Foundations, Version Control</p>
             </div>
         </section>
 
         <!-- Volunteering Section -->
         <section class="section" id="volunteering">
             <h2>Volunteering</h2>
-            
+
             <div class="work-item">
                 <h4>Reviewer - DravidianLangTech Workshop (NAACL 2025)</h4>
                 <div class="date">January 2025 (1 month)</div>
-                <p>Contributed as volunteer paper reviewer for the Fifth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages. Evaluated research submissions specializing in hate speech detection across text and speech data.</p>
+                <p>Contributed as volunteer paper reviewer for the Fifth Workshop on Speech, Vision, and Language
+                    Technologies for Dravidian Languages. Evaluated research submissions specializing in hate speech
+                    detection across text and speech data.</p>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="section" id="contact">
             <h2>Contact Me</h2>
-            
+
             <div class="contact-form">
                 <h3>Get in Touch</h3>
                 <p><strong>Email:</strong> luxshan2327@gmail.com</p>
                 <p><strong>Mobile:</strong> +94-77-3038402</p>
                 <p><strong>Address:</strong> Visuvamadu East, Visuvamadu, Mullaitivu, Northern Province, Sri Lanka</p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lux-thavarasa" target="_blank" style="color: var(--link-color);">linkedin.com/in/lux-thavarasa</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/luxshan2000" target="_blank" style="color: var(--link-color);">github.com/luxshan2000</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lux-thavarasa" target="_blank"
+                        style="color: var(--link-color);">linkedin.com/in/lux-thavarasa</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/luxshan2000" target="_blank"
+                        style="color: var(--link-color);">github.com/luxshan2000</a></p>
                 <p><strong>Languages:</strong> Tamil (Native), English (Professional Working)</p>
-                
+
                 <div style="margin-top: 20px; padding: 15px; background-color: var(--emphasis-bg); border-radius: 5px;">
-                    <p><em style="color: var(--emphasis-color);">"Let's shape the future together! I'm eager to connect with like-minded individuals and work on projects that push the boundaries of technology."</em></p>
+                    <p><em style="color: var(--emphasis-color);">"Let's shape the future together! I'm eager to connect
+                            with like-minded individuals and work on projects that push the boundaries of
+                            technology."</em></p>
                 </div>
             </div>
         </section>
@@ -671,12 +832,11 @@
     </div>
 
     <script>
-        // Theme toggle functionality
         function toggleTheme() {
             const html = document.documentElement;
             const themeToggle = document.querySelector('.theme-toggle');
             const currentTheme = html.getAttribute('data-theme');
-            
+
             if (currentTheme === 'dark') {
                 html.removeAttribute('data-theme');
                 themeToggle.innerHTML = '🌙 Dark Mode';
@@ -688,11 +848,10 @@
             }
         }
 
-        // Load saved theme on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const savedTheme = localStorage.getItem('theme');
             const themeToggle = document.querySelector('.theme-toggle');
-            
+
             if (savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 themeToggle.innerHTML = '☀️ Light Mode';
@@ -701,7 +860,6 @@
             }
         });
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -716,4 +874,5 @@
         });
     </script>
 </body>
+
 </html>
