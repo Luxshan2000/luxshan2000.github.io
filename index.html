@@ -121,12 +121,121 @@
             margin: 0;
             padding: 0;
             background: var(--primary-bg);
-            background-image:
-                radial-gradient(circle at 20% 50%, rgba(9, 105, 218, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(9, 105, 218, 0.03) 0%, transparent 50%);
             color: var(--text-primary);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Gradient */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(9, 105, 218, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(9, 105, 218, 0.05) 0%, transparent 50%);
+            animation: gradientShift 15s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+        }
+
+        /* Floating Particles */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--accent-color);
+            opacity: 0.06;
+            animation: float linear infinite;
+        }
+
+        .particle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-duration: 25s;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            left: 70%;
+            animation-duration: 30s;
+            animation-delay: 5s;
+        }
+
+        .particle:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            left: 40%;
+            animation-duration: 35s;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(4) {
+            width: 50px;
+            height: 50px;
+            left: 85%;
+            animation-duration: 28s;
+            animation-delay: 7s;
+        }
+
+        .particle:nth-child(5) {
+            width: 70px;
+            height: 70px;
+            left: 25%;
+            animation-duration: 32s;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.06;
+            }
+
+            90% {
+                opacity: 0.06;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .container {
@@ -477,6 +586,15 @@
 </head>
 
 <body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <button class="theme-toggle" onclick="toggleTheme()">
         🌙 Dark Mode
     </button>
@@ -672,6 +790,29 @@
         <!-- Publications Section -->
         <section class="section" id="publications">
             <h2>Publications</h2>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="https://arxiv.org/pdf/2510.24081" target="_blank"
+                        style="color: var(--text-primary); text-decoration: none;">
+                        Global PIQA: Evaluating Physical Commonsense Reasoning Across 100+ Languages and Cultures
+                    </a>
+                </div>
+                <div class="publication-venue">arXiv preprint • October 2024</div>
+                <p>To date, there exist almost no culturally-specific evaluation benchmarks for large language models
+                    (LLMs) that cover a large number of languages and cultures. In this paper, we present Global PIQA, a
+                    participatory commonsense reasoning benchmark for over 100 languages, constructed by hand by 335
+                    researchers from 65 countries around the world. The 116 language varieties in Global PIQA cover five
+                    continents, 14 language families, and 23 writing systems. In the non-parallel split of Global PIQA,
+                    over 50% of examples reference local foods, customs, traditions, or other culturally-specific
+                    elements. We find that state-of-the-art LLMs perform well on Global PIQA in aggregate, but they
+                    exhibit weaker performance in lower-resource languages (up to a 37% accuracy gap, despite random
+                    chance at 50%). Open models generally perform worse than proprietary models. Global PIQA highlights
+                    that in many languages and cultures, everyday knowledge remains an area for improvement, alongside
+                    more widely-discussed capabilities such as complex reasoning and expert knowledge. Beyond its uses
+                    for LLM evaluation, we hope that Global PIQA provides a glimpse into the wide diversity of cultures
+                    in which human language is embedded.</p>
+            </div>
 
             <div class="publication-item">
                 <div class="publication-title">Incepto@DravidianLangTech 2025: Detecting Abusive Tamil and Malayalam
