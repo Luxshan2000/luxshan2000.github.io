@@ -1033,7 +1033,9 @@
     </script>
 
     <!-- WebMCP Integration -->
+    <script>window.module = { exports: {} };</script>
     <script src="https://unpkg.com/@jason.today/webmcp@latest/build/webmcp.js"></script>
+    <script>window.WebMCP = window.module.exports; delete window.module;</script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mcp = new WebMCP({
