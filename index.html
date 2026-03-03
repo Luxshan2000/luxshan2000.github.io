@@ -1031,6 +1031,388 @@
             });
         });
     </script>
+
+    <!-- WebMCP Integration -->
+    <script src="https://unpkg.com/@jason.today/webmcp@latest/build/webmcp.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mcp = new WebMCP({
+                color: '#0969da',
+                position: 'bottom-right',
+                size: '40px',
+                padding: '15px'
+            });
+
+            // Helper: extract text content from a section by ID
+            function getSectionText(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (!section) return 'Section not found.';
+                return section.innerText.trim();
+            }
+
+            // --- Resources ---
+
+            mcp.registerResource(
+                'portfolio-about',
+                'About Luxshan Thavarasa - bio, summary, and research interests',
+                { uri: 'portfolio://about', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://about',
+                            mimeType: 'text/plain',
+                            text: getSectionText('about')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-experience',
+                'Professional work experience and roles',
+                { uri: 'portfolio://experience', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://experience',
+                            mimeType: 'text/plain',
+                            text: getSectionText('experience')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-education',
+                'Education background and qualifications',
+                { uri: 'portfolio://education', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://education',
+                            mimeType: 'text/plain',
+                            text: getSectionText('education')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-projects',
+                'Key projects with descriptions and tech stacks',
+                { uri: 'portfolio://projects', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://projects',
+                            mimeType: 'text/plain',
+                            text: getSectionText('projects')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-publications',
+                'Research publications and papers',
+                { uri: 'portfolio://publications', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://publications',
+                            mimeType: 'text/plain',
+                            text: getSectionText('publications')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-skills',
+                'Technical skills and competencies',
+                { uri: 'portfolio://skills', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://skills',
+                            mimeType: 'text/plain',
+                            text: getSectionText('skills')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-certifications',
+                'Professional certifications',
+                { uri: 'portfolio://certifications', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://certifications',
+                            mimeType: 'text/plain',
+                            text: getSectionText('certifications')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-awards',
+                'Honours and awards',
+                { uri: 'portfolio://awards', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://awards',
+                            mimeType: 'text/plain',
+                            text: getSectionText('awards')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-contact',
+                'Contact information for Luxshan Thavarasa',
+                { uri: 'portfolio://contact', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://contact',
+                            mimeType: 'text/plain',
+                            text: getSectionText('contact')
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerResource(
+                'portfolio-full',
+                'Complete portfolio page content',
+                { uri: 'portfolio://full', mimeType: 'text/plain' },
+                function () {
+                    return {
+                        contents: [{
+                            uri: 'portfolio://full',
+                            mimeType: 'text/plain',
+                            text: document.querySelector('.container').innerText.trim()
+                        }]
+                    };
+                }
+            );
+
+            // --- Tools ---
+
+            mcp.registerTool(
+                'get_section',
+                'Get the content of a specific portfolio section',
+                {
+                    section: {
+                        type: 'string',
+                        description: 'Section name: about, experience, education, projects, publications, skills, certifications, awards, contact'
+                    }
+                },
+                function (args) {
+                    var text = getSectionText(args.section);
+                    return {
+                        content: [{
+                            type: 'text',
+                            text: text
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerTool(
+                'navigate_to_section',
+                'Scroll the page to a specific section',
+                {
+                    section: {
+                        type: 'string',
+                        description: 'Section ID to navigate to: about, experience, education, projects, publications, skills, certifications, awards, contact'
+                    }
+                },
+                function (args) {
+                    var target = document.getElementById(args.section);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        return {
+                            content: [{
+                                type: 'text',
+                                text: 'Navigated to section: ' + args.section
+                            }]
+                        };
+                    }
+                    return {
+                        content: [{
+                            type: 'text',
+                            text: 'Section not found: ' + args.section
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerTool(
+                'search_portfolio',
+                'Search across all portfolio content for a keyword or phrase',
+                {
+                    query: {
+                        type: 'string',
+                        description: 'The search term to look for in the portfolio'
+                    }
+                },
+                function (args) {
+                    var query = args.query.toLowerCase();
+                    var sections = ['about', 'experience', 'education', 'projects', 'publications', 'skills', 'certifications', 'awards', 'contact'];
+                    var results = [];
+
+                    sections.forEach(function (sectionId) {
+                        var text = getSectionText(sectionId);
+                        if (text.toLowerCase().includes(query)) {
+                            var lines = text.split('\n').filter(function (line) {
+                                return line.toLowerCase().includes(query);
+                            });
+                            results.push({
+                                section: sectionId,
+                                matches: lines.slice(0, 5)
+                            });
+                        }
+                    });
+
+                    if (results.length === 0) {
+                        return {
+                            content: [{
+                                type: 'text',
+                                text: 'No results found for: ' + args.query
+                            }]
+                        };
+                    }
+
+                    var output = 'Search results for "' + args.query + '":\n\n';
+                    results.forEach(function (r) {
+                        output += '## ' + r.section + '\n';
+                        r.matches.forEach(function (m) {
+                            output += '- ' + m.trim() + '\n';
+                        });
+                        output += '\n';
+                    });
+
+                    return {
+                        content: [{
+                            type: 'text',
+                            text: output
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerTool(
+                'get_contact_info',
+                'Get contact information for Luxshan Thavarasa',
+                {},
+                function () {
+                    return {
+                        content: [{
+                            type: 'text',
+                            text: JSON.stringify({
+                                name: 'Luxshan Thavarasa',
+                                email: 'luxshan2327@gmail.com',
+                                phone: '+94773038402',
+                                linkedin: 'https://linkedin.com/in/lux-thavarasa',
+                                github: 'https://github.com/luxshan2000',
+                                location: 'Mullaitivu, Sri Lanka',
+                                website: 'https://luxshan2000.github.io/'
+                            }, null, 2)
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerTool(
+                'toggle_theme',
+                'Toggle between light and dark mode on the portfolio site',
+                {},
+                function () {
+                    toggleTheme();
+                    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    return {
+                        content: [{
+                            type: 'text',
+                            text: 'Theme switched to: ' + current + ' mode'
+                        }]
+                    };
+                }
+            );
+
+            // --- Prompts ---
+
+            mcp.registerPrompt(
+                'introduce-luxshan',
+                'Generate a professional introduction for Luxshan Thavarasa',
+                [
+                    { name: 'context', description: 'Context for the introduction (e.g., job application, networking, conference)', required: false }
+                ],
+                function (args) {
+                    var aboutText = getSectionText('about');
+                    var expText = getSectionText('experience');
+                    var prompt = 'Based on the following portfolio information, write a professional introduction for Luxshan Thavarasa';
+                    if (args.context) {
+                        prompt += ' suitable for: ' + args.context;
+                    }
+                    prompt += '.\n\nAbout:\n' + aboutText + '\n\nExperience:\n' + expText;
+                    return {
+                        messages: [{
+                            role: 'user',
+                            content: { type: 'text', text: prompt }
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerPrompt(
+                'summarize-portfolio',
+                'Generate a concise summary of the entire portfolio',
+                [],
+                function () {
+                    var fullText = document.querySelector('.container').innerText.trim();
+                    return {
+                        messages: [{
+                            role: 'user',
+                            content: {
+                                type: 'text',
+                                text: 'Summarize the following portfolio in 3-5 bullet points highlighting key strengths, experience, and research contributions:\n\n' + fullText
+                            }
+                        }]
+                    };
+                }
+            );
+
+            mcp.registerPrompt(
+                'draft-cover-letter',
+                'Draft a cover letter based on the portfolio for a specific role',
+                [
+                    { name: 'role', description: 'The job role/title to apply for', required: true },
+                    { name: 'company', description: 'The company name', required: true }
+                ],
+                function (args) {
+                    var aboutText = getSectionText('about');
+                    var expText = getSectionText('experience');
+                    var skillsText = getSectionText('skills');
+                    var pubsText = getSectionText('publications');
+                    return {
+                        messages: [{
+                            role: 'user',
+                            content: {
+                                type: 'text',
+                                text: 'Draft a professional cover letter for Luxshan Thavarasa applying for the role of "' + args.role + '" at "' + args.company + '". Use the following portfolio details:\n\nAbout:\n' + aboutText + '\n\nExperience:\n' + expText + '\n\nSkills:\n' + skillsText + '\n\nPublications:\n' + pubsText
+                            }
+                        }]
+                    };
+                }
+            );
+        });
+    </script>
 </body>
 
 </html>
