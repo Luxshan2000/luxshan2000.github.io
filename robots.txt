@@ -1,15 +1,98 @@
+# https://luxshan2000.github.io/robots.txt
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://luxshan2000.github.io/sitemap.xml
+# --- Search engines ---
+User-agent: Googlebot
+Allow: /
 
-# Allow all crawlers access to CSS and JS files
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# --- AI answer engines / assistants (explicitly welcome) ---
+# This is a personal academic and professional profile. Indexing, citing and
+# summarising it is welcome. A plain-text version lives at /llms.txt.
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# --- Assets ---
+Allow: /assets/
 Allow: *.css
 Allow: *.js
+Allow: /llms.txt
 
-# Allow image files
-Allow: /assets/
-
-# Crawl-delay (optional, in seconds)
-Crawl-delay: 1
+Sitemap: https://luxshan2000.github.io/sitemap.xml

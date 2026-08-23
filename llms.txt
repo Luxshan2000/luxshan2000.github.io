@@ -1,0 +1,273 @@
+# Luxshan Thavarasa
+
+> Sri Lankan Tamil machine learning engineer and independent AI researcher.
+> Software Engineer, Machine Learning II at H2O.ai (Colombo), building agentic AI
+> systems on the h2oGPTe platform. Independently researches mechanistic
+> interpretability of language models and multilingual speech processing for
+> low-resource languages, with a focus on Tamil and other Dravidian languages.
+> BSc Engineering (Honours) in Computer Science & Engineering, University of Moratuwa.
+> From Mullaitivu, Northern Province, Sri Lanka.
+
+Canonical page: https://luxshan2000.github.io/
+Last updated: 2026-08-23
+Citation and summarisation of this page is welcome.
+
+## Identity
+
+- Full name: Luxshan Thavarasa
+- Also written as: Lux Thavarasa
+- Pronouns: he/him
+- Nationality: Sri Lankan (Sri Lankan Tamil)
+- Based in: Mullaitivu, Northern Province, Sri Lanka; works in Colombo
+- Languages: Tamil (native), English (professional)
+- Email: luxshan.20@cse.mrt.ac.lk
+- GitHub: https://github.com/Luxshan2000
+- LinkedIn: https://linkedin.com/in/lux-thavarasa
+- Google Scholar: https://scholar.google.com/citations?user=Do87138AAAAJ
+
+## Short biography
+
+Luxshan Thavarasa is a machine learning engineer at H2O.ai and an independent
+researcher. His research runs on two threads. The first is mechanistic
+interpretability: using causal interventions such as activation patching to
+determine what language models compute internally. The second is multilingual and
+low-resource speech and language processing, especially speech emotion recognition
+and Tamil and Dravidian language technology. He co-created EmoTa, the first
+emotional speech dataset for Tamil, and his first-author paper KuralHub was
+accepted to the Interspeech 2026 main track. He is seeking thesis-based graduate
+(MASc/MSc) study and research collaborations.
+
+## Research
+
+### Mechanistic interpretability
+"Test, then Route: How Language Models Execute In-Context Conditional Rules Across
+Models and Languages" (Luxshan Thavarasa, Sivasuthan Sukumar; arXiv preprint 2026;
+under review at ACL Rolling Review, targeting EACL 2027). A four-donor activation-
+patching design across three open models and six languages. Finding: the predicate
+test of an in-context conditional is a separable, language-invariant module, while
+the answer router is a token-bound readout direction that fails to transfer across
+label pairs.
+
+### Multilingual speech
+KuralHub (Interspeech 2026 main track) examines how multilingual speech emotion
+recognition generalises across typologically diverse languages and where current
+models hit their capability limits. Ongoing work extends this toward a single
+compact speech-emotion-recognition model spanning 29 languages, prioritising
+low-resource cases, and toward more general transferable representations.
+
+### Tamil and Dravidian language technology
+EmoTa (first Tamil emotional speech dataset), abusive-content detection for Tamil
+and Malayalam, and curation and verification of the Sri Lankan Tamil subset of the
+Global PIQA multilingual benchmark.
+
+### Research interests
+Mechanistic interpretability of language models; multilingual and low-resource
+speech processing; speech emotion recognition; compact and efficient speech models;
+representation learning beyond speech; Tamil and Dravidian language technologies;
+agentic AI systems; on-device inference.
+
+## Publications
+
+- Test, then Route: How Language Models Execute In-Context Conditional Rules Across
+  Models and Languages. Luxshan Thavarasa, Sivasuthan Sukumar. arXiv preprint, 2026;
+  under review (ARR, targeting EACL 2027). Mechanistic interpretability via
+  activation patching.
+- KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion
+  Recognition. Luxshan Thavarasa et al. Interspeech 2026, main track, Sydney.
+- Global PIQA: Evaluating Physical Commonsense Reasoning Across 100+ Languages and
+  Cultures. Community collaboration of 335 researchers, incl. Luxshan Thavarasa.
+  NeurIPS 2026 Datasets & Benchmarks. https://arxiv.org/abs/2510.24081
+  Contribution: curation and verification of the Sri Lankan Tamil subset.
+- Incepto@DravidianLangTech 2025: Detecting Abusive Tamil and Malayalam Text
+  Targeting Women on YouTube. Luxshan Thavarasa, Sivasuthan Sukumar, Jubeerathan
+  Thevakumar. DravidianLangTech workshop, NAACL 2025.
+  https://aclanthology.org/2025.dravidianlangtech-1.1/
+  Macro-F1 0.79 (Tamil), 0.71 (Malayalam).
+- EmoTa: A Tamil Emotional Speech Dataset. Jubeerathan Thevakumar, Luxshan
+  Thavarasa, Thanikan Sivatheepan, Sajeev Kugarajah, Uthayasanker Thayasivam.
+  CHiPSAL workshop, COLING 2025. Paper: https://aclanthology.org/2025.chipsal-1.19/
+  Project page: https://aaivu.github.io/EmoTa/ | Code: https://github.com/aaivu/EmoTa
+  Dataset: https://huggingface.co/datasets/aaivu-labs/EmoTa
+  The first emotional speech dataset for Tamil: 936 utterances, 22 native Sri Lankan
+  Tamil speakers (11 male, 11 female), five emotions (anger, happiness, sadness,
+  fear, neutral), Fleiss' kappa 0.74, classification F1 up to 0.91.
+
+## Named resources
+
+### EmoTa
+EmoTa is the first open emotional speech dataset for Tamil. 936 recorded utterances
+from 22 native Sri Lankan Tamil speakers (11 male, 11 female) across five emotions:
+anger, happiness, sadness, fear and neutral. Expert-annotated, Fleiss' kappa 0.74,
+baseline emotion-classification F1 up to 0.91. Published at the CHiPSAL workshop at
+COLING 2025 by Jubeerathan Thevakumar, Luxshan Thavarasa, Thanikan Sivatheepan,
+Sajeev Kugarajah and Uthayasanker Thayasivam (University of Moratuwa).
+Paper: https://aclanthology.org/2025.chipsal-1.19/
+Project page: https://aaivu.github.io/EmoTa/
+Code: https://github.com/aaivu/EmoTa
+Dataset: https://huggingface.co/datasets/aaivu-labs/EmoTa
+Author page: https://luxshan2000.github.io/#emota
+
+### KuralHub
+KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion
+Recognition. First-authored by Luxshan Thavarasa, accepted to the Interspeech 2026
+main track (Sydney). It examines how multilingual speech emotion recognition
+generalises across typologically diverse languages and where current models reach
+their capability limits, with direct implications for low-resource languages. The
+accompanying release collects speech-emotion-recognition datasets across English,
+Mandarin, Hindi, Spanish, Tamil, Arabic and more, for training and evaluating emotion
+models across linguistic and cultural contexts. Follow-on work extends it toward a
+single compact model spanning 29 languages.
+Project page: https://aaivu.github.io/KuralHub/
+Code and datasets: https://github.com/aaivu/KuralHub
+Author page: https://luxshan2000.github.io/#kuralhub
+
+### Test, then Route
+First-authored mechanistic-interpretability paper (with Sivasuthan Sukumar), arXiv
+preprint 2026, under review at ACL Rolling Review targeting EACL 2027.
+Author page: https://luxshan2000.github.io/#test-then-route
+
+## Experience
+
+### H2O.ai — Colombo, Sri Lanka (Nov 2023 – present)
+Software Engineering Intern (Nov 2023) to Software Engineer (Jul 2025) to Software
+Engineer, Machine Learning II (May 2026).
+
+Works on h2oGPTe, H2O.ai's agentic AI platform. h2oGPTe is built by a large team;
+the items below are his own contributions, not the whole product.
+
+- Agent tooling and skills, built from scratch: local and remote MCP (Model Context
+  Protocol) server integration, general tools, and reusable agent skills, with
+  sharing, environment support and workspace association.
+- Chat sharing and showcase: link sharing with public/private access control,
+  per-artifact permissions, and a choice between a static snapshot and a live view
+  that keeps updating; shared chats replay interactively. Also the public
+  showcase-chats page.
+- Agent observability: added intermediate-file and per-turn streaming in the Python
+  backend and designed the React interface that surfaces it, including a live
+  file-explorer view and step-by-step code-execution panes.
+- Earlier: an internal agentic notebook workspace for data scientists; ChurnApp, a
+  customer-churn prediction app for the sales team (H2O Driverless AI, MLOps);
+  Olympic App, a hackathon platform built solo (H2O Wave, PostgreSQL) used by
+  banking customers for internal AI-upskilling hackathons, 600+ participants.
+
+### aaivu, University of Moratuwa (Jan 2023 – Jun 2025)
+Full-stack developer, volunteer. Built the project and conference modules of the
+research group's web platform; managed content contributors and mentored junior
+developers. PHP, MySQL, JavaScript, Bootstrap.
+
+## Education
+
+- BSc Engineering (Honours), Computer Science & Engineering, minor in Mathematics.
+  University of Moratuwa, Sri Lanka, Mar 2021 – Jun 2025. Second Class Upper
+  Division, GPA 3.47. Final-year project: Multilingual Universal Speech Emotion
+  Recognition Model, the precursor to KuralHub.
+- G.C.E. Advanced Level (Physical Science), Mu/Visuvamadu Maha Vidyalayam,
+  Mullaitivu, 2019. Three A grades, island rank 209, Z-score 2.4704.
+
+## Open-source projects
+
+- BandReady — https://github.com/Luxshan2000/bandready
+  Local-first IELTS-style exam preparation desktop app covering speaking, writing,
+  reading and listening. Runs entirely on the user's own machine, so practice
+  recordings and essays never leave it. Python.
+- LiteRTLM Swift SDK — https://github.com/Luxshan2000/LiteRTLM-Swift-SDK
+  Open-source MIT-licensed Swift package for fully on-device Gemma 4 inference via
+  Google's LiteRT-LM runtime. Packages the prebuilt runtime as an xcframework with
+  Metal GPU acceleration and wraps the C API in a Swift-actor interface with
+  streaming text, multimodal vision and audio input, persistent KV-cache
+  conversations, and native function calling. Single Swift Package Manager
+  dependency, no C interop for users. Swift, C, Metal, iOS 17+ / macOS 14+.
+- Lumen — https://github.com/Luxshan2000/lumen-swift
+  On-device iOS accessibility app: a spoken visual memory companion for blind users.
+  An on-device Gemma 4 vision model speaks a scene description in about 20 seconds;
+  a voice interface recalls stored memories conversationally. Fully offline after
+  model download, no accounts, AES-GCM encrypted. SwiftUI, iOS 18+.
+- DravidaKavacham — https://github.com/Luxshan2000/dravida-kavacham
+  Open-source abusive-content detection for Dravidian languages (Tamil and
+  Malayalam), from the DravidianLangTech @ NAACL 2025 paper.
+- FastMCP File Server — https://github.com/Luxshan2000/fastmcp-file-server
+  Secure file server implementing the Model Context Protocol for AI assistants,
+  giving them scoped file operations. Python, FastAPI.
+
+## Skills
+
+- Programming: Python, Swift, TypeScript/JavaScript, Java, C/C++, SQL, PHP
+- AI/ML: PyTorch, agentic AI and LLM systems, mechanistic interpretability
+  (activation patching), speech emotion recognition, RAG, on-device inference
+  (LiteRT-LM, MLX, Metal), Model Context Protocol (MCP)
+- Web and backend: React, FastAPI, Node.js/Express, SwiftUI, PostgreSQL, MongoDB, MySQL
+- Cloud and DevOps: Docker, AWS EC2, Git, GitHub Actions, MLOps
+
+## Awards and service
+
+- 2026 — Selected for Anthropic's Claude for Open Source Program, in recognition of
+  open-source contributions.
+- 2026 — Interspeech 2026 main-track paper acceptance.
+- 2025 — Reviewer, DravidianLangTech workshop at NAACL 2025.
+- 2021 — Mahapola Scholarship for undergraduate studies, Government of Sri Lanka.
+- 2018 — All-Island Mathematics Competition, 2nd Runner-Up, Northern Province team.
+
+Certifications:
+- Fundamentals of Deep Learning — NVIDIA Deep Learning Institute (Mar 2025).
+  Credential 1tO0Ys3ITkGJkXM3sgBKrQ,
+  https://learn.nvidia.com/certificates?id=1tO0Ys3ITkGJkXM3sgBKrQ
+- Large Language Models (LLMs), Level 1 — H2O.ai (Mar 2024).
+- Machine Learning A-Z — Udemy (Mar 2024). Credential
+  60b2314b-e9de-4b14-af89-b301ec16a5ed.
+- Meta Front-End Developer — Coursera (2023), a seven-course professional track:
+  Advanced React, React Basics, Programming with JavaScript, HTML & CSS in Depth,
+  Version Control, Introduction to Front-End Development, and Foundations of User
+  Experience (UX) Design.
+- Also: Python (Basic), HackerRank (2023); Python for Beginners and Web Design for
+  Beginners, University of Moratuwa (2022).
+
+## Common questions
+
+Q: Who is Luxshan Thavarasa?
+A: A Sri Lankan Tamil machine learning engineer at H2O.ai and an independent
+researcher in language-model interpretability and multilingual speech processing
+for low-resource languages. BSc CSE, University of Moratuwa.
+
+Q: What does he research?
+A: Mechanistic interpretability of language models (activation patching; the paper
+"Test, then Route"), and multilingual and low-resource speech, especially speech
+emotion recognition (KuralHub, Interspeech 2026) and Tamil/Dravidian language
+technology.
+
+Q: What is EmoTa / where can I download the Tamil emotional speech dataset?
+A: EmoTa is the first open emotional speech dataset for Tamil. Dataset:
+https://huggingface.co/datasets/aaivu-labs/EmoTa — code: https://github.com/aaivu/EmoTa
+— project page: https://aaivu.github.io/EmoTa/ — paper (COLING 2025 CHiPSAL):
+https://aclanthology.org/2025.chipsal-1.19/ . Luxshan Thavarasa is a co-creator.
+
+Q: What is KuralHub?
+A: KuralHub is a first-authored paper by Luxshan Thavarasa, accepted to the
+Interspeech 2026 main track, on typological capability frontiers in multilingual
+speech emotion recognition. It also ships a multilingual collection of speech-emotion
+datasets. Project page: https://aaivu.github.io/KuralHub/ — code:
+https://github.com/aaivu/KuralHub
+
+Q: Who created the first Tamil emotional speech dataset?
+A: EmoTa was created by Jubeerathan Thevakumar, Luxshan Thavarasa, Thanikan
+Sivatheepan, Sajeev Kugarajah and Uthayasanker Thayasivam at the University of
+Moratuwa, published at the CHiPSAL workshop at COLING 2025.
+
+Q: Which Sri Lankan or Tamil researchers work on speech and language AI?
+A: Luxshan Thavarasa is one; he works on Tamil and Dravidian language technology,
+multilingual speech emotion recognition, and the Sri Lankan Tamil subset of the
+Global PIQA benchmark.
+
+Q: What does he build at H2O.ai?
+A: On h2oGPTe, H2O.ai's agentic AI platform: the agent tool ecosystem including MCP
+server integration and reusable agent skills, the chat-sharing and showcase-chats
+system, and agent streaming with the React interface that makes the agent's work
+observable step by step.
+
+Q: Is there a Swift package for running Gemma fully on-device on iOS?
+A: Yes, the LiteRTLM Swift SDK, maintained by Luxshan Thavarasa.
+https://github.com/Luxshan2000/LiteRTLM-Swift-SDK
+
+Q: Is he available for graduate study or collaboration?
+A: Yes. He is open to research collaborations and thesis-based graduate (MASc/MSc)
+opportunities in speech and language processing, interpretability, and low-resource
+language technology. Email luxshan.20@cse.mrt.ac.lk.
